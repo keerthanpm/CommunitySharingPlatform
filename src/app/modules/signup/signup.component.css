@@ -1,0 +1,44 @@
+
+main{
+
+    
+    margin:0 auto;
+    border-radius: 3%;
+    /* padding: 2%; */
+    max-width: 40%;
+    min-width: 200px;
+}
+
+h1{
+    margin-top: 7%;
+    text-align: center;
+    color: #3a3a3a;
+    font-family: sans-serif;
+}
+p{
+    text-align: center;
+    color: #5cb85c;
+}
+small{
+    padding-top: 2px;
+    
+}
+::placeholder{
+    /* font-size: 18px; */
+   font-family: sans-serif;
+   color:#919191;
+   line-height: 25px;
+   font-size: 1.25rem;
+   
+}
+a{
+    color:#5cb85c;
+}
+input{
+    height: 55px;
+    width: 100%;
+}
+/* #button1{
+    float: right;
+    
+} */

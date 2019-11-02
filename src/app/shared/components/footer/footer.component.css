@@ -1,0 +1,14 @@
+footer{
+    padding:20px;
+    background-color: #f3f3f3;
+}
+
+.footer{
+    text-align: center;
+}
+
+.text{
+    font-family:"titillium web", sans-serif;
+    font-weight: 400;
+    color:#8bd094;
+}

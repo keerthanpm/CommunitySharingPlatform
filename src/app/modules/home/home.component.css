@@ -1,0 +1,20 @@
+.jumbotron{
+    background-color: #5cb85c;
+    margin:0;
+    width:100%;
+    height:200px;
+}
+.content{
+    color:white;
+    text-align: center;
+    font-family: "titillium web", sans-serif;
+    
+}
+.jt{
+    font-size: 56px;
+    font-weight: 400;
+}
+.jc{
+    font-size: 36;
+    font-weight: 300;
+}

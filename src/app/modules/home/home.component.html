@@ -1,0 +1,23 @@
+
+<div class="jumbotron ">
+  <div class="content">
+    <h1 class="jt"><b>Conduit</b></h1>
+    <p class="jc">A place to share your knowledge.</p>
+  </div>
+
+</div>
+
+  
+  
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link
+    *ngFor="let link of navLinks"
+    [routerLink]="link.link"
+    routerLinkActive #rla="routerLinkActive" 
+    [active]="rla.isActive">
+   {{link.label}}
+  </a>
+  </nav>
+
+
+<router-outlet></router-outlet>
