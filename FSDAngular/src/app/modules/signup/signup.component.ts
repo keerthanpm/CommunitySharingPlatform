@@ -2,10 +2,10 @@ import { Component,OnInit} from '@angular/core';
 import { FormBuilder,Validators, FormGroup } from '@angular/forms';
 import { forbiddenNameValidator } from './shared/user-name.validator';
 import { PasswordValidator } from './shared/password.validator';
-//import {UsernameServiceService} from '../username-service.service';
+import {UsernameServiceService} from '../../username-service.service';
 import { stringify } from '@angular/compiler/src/util';
 import { Router } from '@angular/router';
-//import{ SignupService} from '../signup.service';
+import{ SignupService} from '../../signup.service';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -19,12 +19,13 @@ password:string="";
 confirmPassword:string="";
 email:string="";
 post:any;
+isSubmitting=false;
 
 
   get userName(){
     return this.registrationForm.get('userName1');
   }
-  constructor(private fb: FormBuilder,private router: Router ){
+  constructor(private fb: FormBuilder,private data: UsernameServiceService,private router: Router,private _signUpService: SignupService ){
     this.registrationForm = fb.group({
       'email':['',[Validators.required, Validators.email]],
       'userName1':['',[Validators.required, Validators.minLength(3),forbiddenNameValidator(/password/)]],
@@ -35,11 +36,12 @@ post:any;
    
   
     onRegister(post){
+      this.isSubmitting=true;
       let formObj = this.registrationForm.getRawValue(); 
-      //this._signUpService.signup(formObj)
+      this._signUpService.signup(formObj)
       
       console.log(this.registrationForm.value)
-     // this.data.changeMessage(this.registrationForm.value.userName1);
+      this.data.changeMessage(this.registrationForm.value.userName1);
       alert('Signup successful please login');
       this.router.navigate(['/login']);
     }

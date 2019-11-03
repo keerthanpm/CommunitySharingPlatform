@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { UsernameServiceService } from '../username-service.service';
-//import {LoginService} from '../login.service'
+import { UsernameServiceService } from '../../username-service.service';
+import {LoginService} from '../../login.service'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   user:string;
-  constructor( ){}
+  constructor(private data: UsernameServiceService, private _logInService: LoginService ){}
   userModel:User;
 
   ngOnInit() {
-    //this.data.currentMessage.subscribe(message => this.user= message)
+    this.data.currentMessage.subscribe(message => this.user= message)
     this.userModel = new User(this.user,'');
   }
   onSubmit()
   {
     console.log(this.userModel);
-    //this._logInService.signin(this.userModel)
+    this._logInService.signin(this.userModel)
   }
 }
 
