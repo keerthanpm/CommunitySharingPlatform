@@ -31,10 +31,7 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <input id="description1" formControlName="description" type="text" class="form-control form-control-lg" placeholder="Discribe yourself">
-
-                </div>
+ 
                 <div class="form-group">
                     <input [class.is-invalid]="settingsForm.get('email').invalid && settingsForm.get('email').touched"
                         formControlName="email" type="email" class="form-control form-control-lg" placeholder="Email">

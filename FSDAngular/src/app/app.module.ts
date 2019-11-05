@@ -12,7 +12,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NewArticleComponent } from './new-article/new-article.component';
-import { ArticleComponent } from './article/article.component';
 import { SettingsComponent } from './settings/settings.component';
 
 
@@ -20,7 +19,7 @@ import { SettingsComponent } from './settings/settings.component';
   declarations: [
     AppComponent,
     NewArticleComponent,
-    ArticleComponent,
+    
     SettingsComponent
   ],
   imports: [
