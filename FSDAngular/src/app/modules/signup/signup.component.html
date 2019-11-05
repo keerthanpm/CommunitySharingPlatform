@@ -27,7 +27,7 @@
             required</small>
           <small *ngIf="registrationForm.get('userName1').errors?.required" class="text-danger">Name is required</small>
           <small *ngIf="registrationForm.get('userName1').errors?.forbiddenName"
-            class="text-danger">{{userName.errors?.forbiddenName.value}}
+            class="text-danger">{{userName.errors?.forbiddenName.value}}</small>
         </div>
       </div>
 
