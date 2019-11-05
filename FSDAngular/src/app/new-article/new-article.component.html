@@ -1,0 +1,31 @@
+
+<div class="container-fluid">
+    <main>
+<div>
+  <h1>Sign Up</h1>
+  <a href="https://www.w3schools.com"><p>Have an account?</p></a>
+  
+</div>
+  
+
+    <form [formGroup]="newarticleForm" (ngSubmit)="onArticle(newarticleForm.value)">
+        
+      <div class="form-group">
+        <input [class.is-invalid]="registrationForm.get('articleTitle').invalid && registrationForm.get('articleTitle').touched"
+          formControlName="articleTitle" type="text" class="form-control form-control-lg" placeholder="Ariticle Title" >
+        <div id="label1" *ngIf="registrationForm.get('articleTitle').invalid && registrationForm.get('articleTitle').touched">
+          <small *ngIf="registrationForm.get('articleTitle').errors?.required" class="text-danger">Title is required</small>
+          <small *ngIf="registrationForm.get('articleTitle').errors?.minlength" class="text-danger">
+              Atleast Three character is required
+          </small>
+        </div>
+      </div>
+ 
+      <div>
+        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!newarticleForm.valid" id="button1" >Sign  Up</button>
+      </div>
+       
+    </form>
+  
+  </main>
+</div>

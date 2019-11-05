@@ -11,11 +11,17 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NewArticleComponent } from './new-article/new-article.component';
+import { ArticleComponent } from './article/article.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewArticleComponent,
+    ArticleComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,

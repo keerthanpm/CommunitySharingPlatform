@@ -1,0 +1,77 @@
+<div class="container-fluid">
+    <main>
+        <div>
+            <h1>Settings</h1>
+        </div>
+        <div>
+            <form [formGroup]="settingsForm" (ngSubmit)="onsettings(settingsForm.value)">
+
+                <div class="form-group">
+                    <input [class.is-invalid]="settingsForm.get('urlphoto').invalid" formControlName="urlphoto"
+                        type="text" class="form-control form-control-lg" placeholder="URL of profile photo">
+                    <div id="label1" *ngIf="settingsForm.get('urlphoto').invalid">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input
+                        [class.is-invalid]="settingsForm.get('userName1').invalid && settingsForm.get('userName1').touched"
+                        formControlName="userName1" type="text" class="form-control form-control-lg"
+                        placeholder="User Name">
+                    <div id="label1"
+                        *ngIf="settingsForm.get('userName1').invalid && settingsForm.get('userName1').touched">
+                        <small *ngIf="settingsForm.get('userName1').errors?.minlength" class="text-danger">Minimum 3
+                            character
+                            required</small>
+                        <small *ngIf="settingsForm.get('userName1').errors?.required" class="text-danger">Name is
+                            required</small>
+                        <small *ngIf="settingsForm.get('userName1').errors?.forbiddenName"
+                            class="text-danger">{{userName.errors?.forbiddenName.value}}
+                            userName not allowed</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input id="description1" formControlName="description" type="text" class="form-control form-control-lg" placeholder="Discribe yourself">
+
+                </div>
+                <div class="form-group">
+                    <input [class.is-invalid]="settingsForm.get('email').invalid && settingsForm.get('email').touched"
+                        formControlName="email" type="email" class="form-control form-control-lg" placeholder="Email">
+                    <div id="label1" *ngIf="settingsForm.get('email').invalid && settingsForm.get('email').touched">
+                        <small *ngIf="settingsForm.get('email').errors?.required" class="text-danger">Email is
+                            required</small>
+                        <small *ngIf="settingsForm.get('email').errors?.email" class="text-danger">Email must be a
+                            valid email
+                            address</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                    <input
+                        [class.is-invalid]="settingsForm.get('password').invalid && settingsForm.get('password').touched"
+                        formControlName="password" type="password" class="form-control form-control-lg"
+                        placeholder="Password">
+                    <div id="label1"
+                        *ngIf="settingsForm.get('password').invalid && settingsForm.get('password').touched">
+                        <small *ngIf="settingsForm.get('password').errors?.required" class="text-danger">Password is
+                            required</small>
+                        <small *ngIf="settingsForm.get('password').errors?.minlength" class="text-danger">Minimum 8
+                            character
+                            required</small>
+                    </div>
+                </div>
+
+                <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!settingsForm.valid"
+                    id="button1">Update Settings</button>
+            </form>
+        </div>
+
+        <hr>
+
+        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!settingsForm.valid" id="button2">Click
+            here to Logout</button>
+
+    </main>
+</div>

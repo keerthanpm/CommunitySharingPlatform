@@ -1,0 +1,22 @@
+main{
+    text-align: center;
+    max-width: 40%;
+    min-width: 200px;
+    margin:0 auto;
+    border-radius: 3%;
+    
+}
+
+#button1{
+    margin-top: 5%;;
+    float: right;
+}
+
+#button2{
+    margin-top: 60%;
+    float:left;
+    border-color: red;
+    color: red;
+    background-color: white;
+
+}
