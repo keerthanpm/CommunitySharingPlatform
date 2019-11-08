@@ -15,11 +15,15 @@ const routes: Routes = [{
     path:'',
     component:HomeComponent,
     children:[{
-      path:'yourfeed',
-      component:YourfeedComponent
+      path:'',
+      component:GlobalfeedComponent
     },{
       path:'globalfeed',
       component:GlobalfeedComponent
+      
+    },{
+      path:'yourfeed',
+      component:YourfeedComponent
     }]
   },{
     path:'signup',

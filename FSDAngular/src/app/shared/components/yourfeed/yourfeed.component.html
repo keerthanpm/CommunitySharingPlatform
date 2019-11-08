@@ -1,4 +1,38 @@
-<div class="yourfeed">
+<!-- <div>
 
-<p>yourfeed works!</p>
-</div>
+    <button (click)="likeButtonClick()">Like</button>
+    <p class="btn-test">{{numberoflikes }}</p>
+</div> -->
+
+
+<div class="article-preview" *ngFor="let number of [0,1,2,3,4]">
+        <div class="article-meta">
+            <a href="Username">
+                    <img src="assets/images/smiley-cyrus.jpg">
+            </a>
+            
+            <div class="info">
+                <a class="author" href="/profile/keerthan"> Username </a>
+                <span class="date"> November 2, 2019 </span>
+    
+            </div>
+            <div id="app-favorite-button" class="pull-xs-right">
+                    
+                            <button type="button" class="btn btn-default btn-sm" id="like">
+                              <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                            </button>
+                          
+                </div>
+                <div>
+                    <h3>Title</h3>
+                </div>
+                <div>
+                    <h6>
+                        Post content veerannapalya nagavara bangalore
+                    </h6>
+                </div>
+                <hr>
+    </div>    
+       
+     </div>
+   
