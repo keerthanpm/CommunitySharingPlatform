@@ -18,3 +18,19 @@
     font-size: 36;
     font-weight: 300;
 }
+
+.feed{
+    padding-left:10%;
+    padding-right:10%;
+}
+a:link, a:visited {
+   
+    color:#5cb85c ;
+    font-family: "titillium web", sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    
+    display: inline-block;
+  }
+  
+  

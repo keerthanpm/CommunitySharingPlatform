@@ -6,11 +6,6 @@
     font-weight: 400;
   }
   
-  @media (max-width:767px) {
-    .header-blue{
-      padding-bottom:80px;
-    }
-  }
   
   .header-blue .navbar{
     background:transparent;

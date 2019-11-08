@@ -13,19 +13,20 @@ const routes: Routes = [{
   component:DefaultComponent,
   children:[{
     path:'',
-    component:HomeComponent
+    component:HomeComponent,
+    children:[{
+      path:'yourfeed',
+      component:YourfeedComponent
+    },{
+      path:'globalfeed',
+      component:GlobalfeedComponent
+    }]
   },{
     path:'signup',
     component:SignupComponent
   },{
     path:'login',
     component:LoginComponent
-  },{
-    path:'yourfeed',
-    component:YourfeedComponent
-  },{
-    path:'globalfeed',
-    component:GlobalfeedComponent
   }]
   
 }];

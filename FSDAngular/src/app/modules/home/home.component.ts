@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
     this.navLinks = [
         {
             label: 'Your Feed',
-            link: './yourfeed',
+            link: 'yourfeed',
             index: 1
         }, {
             label: 'Global Feed',
-            link: './globalfeed',
+            link: 'globalfeed',
             index: 2
         }, 
     ];
