@@ -9,14 +9,14 @@
 </div> -->
 
 
-<div class="article-preview" *ngFor="let number of [0,1]">
+<div class="article-preview" *ngFor="let posts of posts">
         <div class="article-meta">
             <a href="Username">
                     <img src="assets/images/smiley-cyrus.jpg">
             </a>
             
             <div class="info">
-                <a class="author" href="/profile/username"> Username </a>
+                <a class="author" href="/profile/username"> {{posts.userId}} </a>
                 <span class="date"> November 2, 2019 </span>
     
             </div>
@@ -28,11 +28,11 @@
                           
                 </div>
                 <div>
-                    <h3>Title</h3>
+                    <h3>{{posts.title}}</h3>
                 </div>
                 <div>
                     <h6>
-                        Post content veerannapalya nagavara bangalore
+                        {{posts.post}}
                     </h6>
                 </div>
                 <hr>
