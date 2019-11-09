@@ -4,11 +4,11 @@ const threadModel = mongoose.Schema({
     title: String,
     post: String,
     userId: Number,
-    likes: { type : Array , "likes" : [
+    likes:  [
         {
-            like: String
+            type: String, unique:true
         }
-    ] },
+    ] ,
     comment: { type : Array , "comment" : [{
        post: String,
        user_id: Number

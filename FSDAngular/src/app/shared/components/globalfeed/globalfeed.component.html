@@ -22,7 +22,7 @@
             </div>
             <div id="app-favorite-button" class="pull-xs-right">
                     
-                            <button type="button" class="btn btn-default btn-sm" id="like">
+                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,posts.userId,posts._id)">
                               <span class="glyphicon glyphicon-thumbs-up"></span> Like
                             </button>
                           

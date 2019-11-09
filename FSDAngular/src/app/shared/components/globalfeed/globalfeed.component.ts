@@ -8,12 +8,20 @@ import { GlobaldataService } from '../../../globaldata.service';
 export class GlobalfeedComponent implements OnInit {
   posts = [];
   constructor(private globaldataservice: GlobaldataService) { }
-
+  myClickFunction(event,userId,threadId) { 
+    //just added console.log which will display the event details in browser on click of the button.
+    this.globaldataservice.postLike(userId,threadId);
+    
+  }
   ngOnInit() {
     this.globaldataservice.sendGetRequest().subscribe((data: any[])=>{
-      console.log(data);
+      
       this.posts = data;
   });
+  
+{
+
+}
 }
   
 }
