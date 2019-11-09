@@ -6,14 +6,19 @@ module.exports = {
     createPost,
     search,
     get,
-    getAll
+    getAll, 
+    like
     
 };
 
-async function createThread (title, post) {
+async function createThread (title, post,id ) {
     const thread = new Thread({
         title: title,
-        post: post
+        post: post,
+        userId: id,
+        likes: {
+            like: 000
+        }
     });
     return await thread.save().then(res => {
         axios.post('http://127.0.0.1:5000/add', {
@@ -27,8 +32,8 @@ async function createThread (title, post) {
         return res._id;});
 }
 
-async function createPost (threadId, post) {
-    return await Thread.findOneAndUpdate(threadId, {$push: {post: post}}).then(success => {
+async function createPost (threadId, post,id) {
+    return await Thread.findOneAndUpdate(threadId, {$push: {comment: {post:post,user_id:id}}}).then(success => {
         return axios.post('http://127.0.0.1:5000/incr', {
             name: threadId
         }).then(resp => {
@@ -68,4 +73,16 @@ async function search (searchTerm){
             return error;            
         });
     
+}
+async function like (id,threadId) {
+    return await Thread.findOneAndUpdate(threadId, {$push: {likes: {like: id}}}).then(success => {
+        return axios.post('http://127.0.0.1:5000/incr', {
+            name: threadId
+        }).then(resp => {
+            return resp.data.value;
+        })
+        .catch(error => {
+            console.log(error);            
+        })
+    })
 }
