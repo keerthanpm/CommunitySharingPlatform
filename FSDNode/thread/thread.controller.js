@@ -57,7 +57,7 @@ function search(req,res){
 }}
 function like(req,res){
     if(req.body.id&& req.body.threadId){
-        console.log(req.body.id+ ' '+  req.body.threadId)
+        
         let like_id = req.body.id;
         let threadId = req.body.threadId;
         threadService.like(like_id,threadId).then((value) => {            
