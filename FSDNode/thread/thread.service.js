@@ -7,9 +7,7 @@ module.exports = {
     search,
     get,
     getAll, 
-    like,
-    getlikes
-    
+    like    
 };
 
 async function createThread (title, post,id ) {
@@ -17,7 +15,7 @@ async function createThread (title, post,id ) {
         title: title,
         post: post,
         userId: id,
-        likes: 0
+        
            
         
     });
@@ -77,26 +75,13 @@ async function search (searchTerm){
     
 }
 async function like (id,threadId) {
+    let CurrentThread = Thread.findById(threadId)
+    return await Thread.update(CurrentThread, {$addToSet: {likes: id}}).then(success => {
+        
     
-    return await Thread.findOneAndUpdate(threadId, {$addToSet: {likes: id}}).then(success => {
-        return axios.post('http://127.0.0.1:5000/incr', {
-            name: threadId
-        }).then(resp => {
-            return resp.data.value;
-        })
-        .catch(error => {
+    }).catch(error => {
             console.log(error);            
         })
-    })
+    
 }
 
-async function getlikes (threadId) {
-    Thread.aggregate([ {$project: {_id: threadId,
-        total: { $size: "$likes" }}}])
-    .then(thread => {
-        return thread;
-    })
-    .catch(error => {
-        return error;            
-    })
-}

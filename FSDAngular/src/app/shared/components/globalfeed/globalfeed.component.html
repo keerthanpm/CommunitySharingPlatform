@@ -9,30 +9,30 @@
 </div> -->
 
 
-<div class="article-preview" *ngFor="let posts of posts">
+<div class="article-preview" *ngFor="let post of posts">
         <div class="article-meta">
             <a href="Username">
                     <img src="assets/images/smiley-cyrus.jpg">
             </a>
             
             <div class="info">
-                <a class="author" href="/profile/username"> {{posts.userId}} </a>
+                <a class="author" href="/profile/username"> {{post.userId}} </a>
                 <span class="date"> November 2, 2019 </span>
     
             </div>
             <div id="app-favorite-button" class="pull-xs-right">
                     
-                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,posts.userId,posts._id)">
-                              <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
+                              <span class="glyphicon glyphicon-thumbs-up"></span> Like ({{post.likes.length}})
                             </button>
                           
                 </div>
                 <div>
-                    <h3>{{posts.title}}</h3>
+                    <h3>{{post.title}}</h3>
                 </div>
                 <div>
                     <h6>
-                        {{posts.post}}
+                        {{post.post}}
                     </h6>
                 </div>
                 <hr>

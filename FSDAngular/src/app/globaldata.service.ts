@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +8,7 @@ export class GlobaldataService {
 
   private REST_API_SERVER = "http://localhost:4000/thread/get";
   private REST_LIKE_ROUTE = "http://localhost:4000/thread/like";
+  
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,6 +23,8 @@ export class GlobaldataService {
       id: userId,
       threadId: threadId
     }
+    
     this.httpClient.post(this.REST_LIKE_ROUTE, body).subscribe();
   }
+  
 }

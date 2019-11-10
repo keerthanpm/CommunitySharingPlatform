@@ -7,7 +7,7 @@ router.post('/post', createPost);
 router.get('/get', get);
 router.get('/search',search);
 router.post('/like', like);
-router.get('/likeno',likeNumber);
+
 
 function createThread(req, res, next) {    
     if(req.body.title && req.body.post&&req.body.userId) {
@@ -57,27 +57,18 @@ function search(req,res){
 }}
 function like(req,res){
     if(req.body.id&& req.body.threadId){
+        console.log(req.body.id+ ' '+  req.body.threadId)
         let like_id = req.body.id;
         let threadId = req.body.threadId;
         threadService.like(like_id,threadId).then((value) => {            
             res.json({value});
-        })
-        .catch(err => next(err))
+        }).catch(err => console.log(err))
     } else {
+        
         res.sendStatus(400);
     }
 
 }
-function likeNumber (req, res, next) {
-    
-    
-    if(req.query.threadId) {
-       
-        threadService.getlikes(req.query.threadId)
-        .then( thread => { res.json(thread)})
-        .catch(err => next(err))
-    }else {
-        res.sendStatus(400);
-    }
-}
+
+
 module.exports = router;
