@@ -13,14 +13,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { SettingsComponent } from './settings/settings.component';
+import { Layout1Component } from './layout/layout1/layout1.component';
+import { Layout1Module } from './layout/layout1/layout1.module';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NewArticleComponent,
+    SettingsComponent,
     
-    SettingsComponent
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,8 @@ import { SettingsComponent } from './settings/settings.component';
     DefaultModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Layout1Module
 
   ],
   providers: [],
