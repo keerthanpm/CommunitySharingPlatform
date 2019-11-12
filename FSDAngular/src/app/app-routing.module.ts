@@ -8,6 +8,9 @@ import { YourfeedComponent } from './shared/components/yourfeed/yourfeed.compone
 import { GlobalfeedComponent } from './shared/components/globalfeed/globalfeed.component';
 import { Layout1Component } from './layout/layout1/layout1.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { NewArticleComponent } from './modules/new-article/new-article.component';
+import { SettingsComponent } from './modules/settings/settings.component';
+import { ProfileComponent } from './modules/profile/profile.component';
 
 
 const routes: Routes = [{
@@ -36,10 +39,10 @@ const routes: Routes = [{
   }]
   
 },{
-  path:'',
+  path:'dashboard',
   component:Layout1Component,
   children:[{
-    path:'dashboard',
+    path:'',
     component: DashboardComponent,
     children:[{
         path:'',
@@ -52,8 +55,20 @@ const routes: Routes = [{
         path:'yourfeed',
         component:YourfeedComponent
       }]
-    }]
-  }];
+  },{
+    path:'newarticle',
+    component:NewArticleComponent
+  },{
+    path:'settings',
+    component:SettingsComponent
+  },{
+    path:'profile',
+    component:ProfileComponent
+  }]
+}]
+ 
+  
+
 
 
 @NgModule({
