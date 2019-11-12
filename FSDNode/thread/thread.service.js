@@ -7,7 +7,8 @@ module.exports = {
     search,
     get,
     getAll, 
-    like    
+    like,
+    yourfeed    
 };
 
 async function createThread (title, post,id ) {
@@ -68,6 +69,18 @@ async function get (threadId) {
 async function search (searchTerm){
     return await Thread.find({ "title": { $regex: '.*' + searchTerm + '.*' } }).then(
         thread => {
+            return thread;
+        }).catch(error => {
+            return error;            
+        });
+    
+}
+async function yourfeed (searchTerm){
+    console.log('here');
+console.log(searchTerm);
+    return await Thread.find({ "likes":{$in: searchTerm}  }).then(
+        thread => {
+            console.log(thread)
             return thread;
         }).catch(error => {
             return error;            

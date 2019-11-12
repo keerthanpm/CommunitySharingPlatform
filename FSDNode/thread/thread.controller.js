@@ -7,6 +7,7 @@ router.post('/post', createPost);
 router.get('/get', get);
 router.get('/search',search);
 router.post('/like', like);
+router.get('/yourfeed',yourfeed);
 
 
 function createThread(req, res, next) {    
@@ -54,7 +55,10 @@ function search(req,res){
         threadService.search(search).then(thread => { res.json(thread)})
         .catch(err => next(err))
 
-}}
+}else{
+    res.sendStatus(400);
+}
+}
 function like(req,res){
     if(req.body.id&& req.body.threadId){
         
@@ -68,6 +72,16 @@ function like(req,res){
         res.sendStatus(400);
     }
 
+}
+function yourfeed(req,res){
+    if(req.query.userId){
+        
+        threadService.yourfeed(req.query.userId).then(thread => { res.json(thread)})
+        .catch(err => next(err))
+
+}else{
+    res.sendStatus(400);
+}
 }
 
 
