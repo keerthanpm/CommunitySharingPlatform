@@ -1,0 +1,14 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: zuul-edge-server
+  cloud:
+    config:
+      uri: http://localhost:8765
+
+
+eureka:
+  client:
+    register-with-eureka: true

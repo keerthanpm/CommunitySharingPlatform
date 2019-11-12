@@ -8,6 +8,7 @@ import { GlobalfeedComponent } from './components/globalfeed/globalfeed.componen
 import { YourfeedComponent } from './components/yourfeed/yourfeed.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
+import { Header1Component } from './components/header1/header1.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     HeaderComponent,
     FooterComponent,
     GlobalfeedComponent,
-    YourfeedComponent
+    YourfeedComponent,
+    Header1Component
   ],
   imports: [
     CommonModule,
@@ -30,7 +32,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     GlobalfeedComponent,
     YourfeedComponent,
     MatTabsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    Header1Component
   ]
 })
 export class SharedModule { }

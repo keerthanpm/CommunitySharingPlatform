@@ -1,0 +1,13 @@
+.feed{
+    padding-left:10%;
+    padding-right:35%;
+}
+a:link, a:visited {
+   
+    color:#5cb85c ;
+    font-family: "titillium web", sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 400;
+    display: inline-block;
+  }

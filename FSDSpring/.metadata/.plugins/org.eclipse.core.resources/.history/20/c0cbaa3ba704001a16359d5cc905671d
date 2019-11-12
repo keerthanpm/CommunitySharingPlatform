@@ -1,0 +1,10 @@
+server:
+  port: 8050
+
+spring:
+  application:
+    name: zuul-edge-server
+
+eureka:
+  client:
+    register-with-eureka: true
