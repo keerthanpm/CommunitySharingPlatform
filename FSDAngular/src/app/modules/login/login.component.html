@@ -1,37 +1,44 @@
 <div class="container-fluid">
-    <main>
-      <h1>Sign in</h1>
-  
-      <a href="#" id="new_account">
-        <p> Need an account?</p>
-      </a>
-  
-  
-  
-      <form #userlogin="ngForm" (ngSubmit)="onSubmit()" novalidate>
-  
+  <main>
+    <h1>Sign in</h1>
+
+    <a href="#" id="new_account">
+      <p> Need an account?</p>
+    </a>
+
+    <div>
+      <form [formGroup]="loginForm" (ngSubmit)="onlogin(loginForm.value)">
         <div class="form-group">
-  
-          <input type="text" #name="ngModel" required [class.is-invalid]="name.invalid && name.touched"
-            class="form-control form-control-lg" name="userName" placeholder="Email" [(ngModel)]="userModel.name">
-          <!-- <div>
-            <small class="text-danger" [class.d-none]="name.valid || name.untouched ">Name is required</small>
-          </div> -->
+          <input [class.is-invalid]="loginForm.get('userName1').invalid && loginForm.get('userName1').touched"
+            formControlName="userName1" type="text" class="form-control form-control-lg" placeholder="User Name">
+          <div id="label1" *ngIf="loginForm.get('userName1').invalid && loginForm.get('userName1').touched">
+            <small *ngIf="loginForm.get('userName1').errors?.minlength" class="text-danger">Minimum 3
+              character
+              required</small>
+            <small *ngIf="loginForm.get('userName1').errors?.required" class="text-danger">Name is
+              required</small>
+            <small *ngIf="loginForm.get('userName1').errors?.forbiddenName"
+              class="text-danger">{{userName1.errors?.forbiddenName.value}}
+              userName1Name not allowed</small>
+          </div>
         </div>
+
+
         <div class="form-group">
-  
-          <input type="password" #password="ngModel" required [class.is-invalid]="password.invalid && password.touched"
-            class="form-control form-control-lg" name="password" placeholder="Password" [(ngModel)]="userModel.password"
-            minlength="6">
-          <!-- <div>
-            <small class="text-danger" [class.d-none]="password.valid || password.untouched ">password is invalid</small>
-          </div> -->
+
+          <input [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched"
+            formControlName="password" type="password" class="form-control form-control-lg" placeholder="Password">
+          <div id="label1" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+            <small *ngIf="loginForm.get('password').errors?.required" class="text-danger">Password is
+              required</small>
+            <small *ngIf="loginForm.get('password').errors?.minlength" class="text-danger">Minimum 8
+              character
+              required</small>
+          </div>
         </div>
-  
-        <div>
-          <button [disabled]="userlogin.form.invalid" class="btn btn-lg btn btn-success" type="submit" id="button1" routerLink='/dashboard'>Sign
-            in</button>
-        </div>
+
+        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!loginForm.valid" id="button1" routerLink="/dashboard">Sign In</button>
       </form>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>

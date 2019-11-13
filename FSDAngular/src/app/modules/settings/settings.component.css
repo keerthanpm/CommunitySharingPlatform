@@ -1,0 +1,40 @@
+main{
+    text-align: center;
+    max-width: 40%;
+    min-width: 200px;
+    margin:0 auto;
+    border-radius: 3%;
+    
+}
+
+#button1{
+    
+    float: right;
+}
+
+#button2{
+    
+    margin-top: 10%;
+    float:left;
+    border-color: #b85c5c;
+    color: #b85c5c;
+    background-color: white;
+
+}
+
+#button2:hover{
+    background-color: #b85c5c;
+    color: black;
+}
+
+#bio{
+    height: 200px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+#userName1,#password,#email {
+    height: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}

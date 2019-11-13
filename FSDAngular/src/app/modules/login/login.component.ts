@@ -1,33 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { UsernameServiceService } from '../../username-service.service';
-import {LoginService} from '../../login.service'
+//import { UsernameServiceService } from '../../username-service.service';
+//import {LoginService} from '../../login.service'
+import { FormBuilder,Validators, FormGroup } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-  user:string;
-  constructor(private data: UsernameServiceService, private _logInService: LoginService ){}
-  userModel:User;
+export class LoginComponent {
+  
+loginForm:FormGroup;
+userName1:string="";
+password:string="";
+post:any;
+isSubmitting=false;
 
-  ngOnInit() {
-    this.data.currentMessage.subscribe(message => this.user= message)
-    this.userModel = new User(this.user,'');
+
+  get userName(){
+    return this.loginForm.get('userName1');
   }
-  onSubmit()
-  {
-    console.log(this.userModel);
-    this._logInService.signin(this.userModel)
+  constructor(private fb: FormBuilder){
+    this.loginForm = fb.group({
+      'userName1':['',[Validators.required, Validators.minLength(3),]],
+      'password':['',[Validators.required, Validators.minLength(8)]],
+      
+    });
   }
-}
-
-export class User {
-
-  constructor(
-      public name:String,
-      public password:string
-    
-
-  ){}
-}
+   
+  
+    onlogin(post){
+      this.isSubmitting=true;
+      let formObj = this.loginForm.getRawValue(); 
+      console.log(this.loginForm.value)
+    }    
+  }
