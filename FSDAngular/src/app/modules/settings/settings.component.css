@@ -1,6 +1,6 @@
 main{
     text-align: center;
-    max-width: 40%;
+    max-width: 50%;
     min-width: 200px;
     margin:0 auto;
     border-radius: 3%;
@@ -14,17 +14,20 @@ main{
 
 #button2{
     
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
     float:left;
     border-color: #b85c5c;
     color: #b85c5c;
     background-color: white;
+    height:45px;
+    
 
 }
 
 #button2:hover{
     background-color: #b85c5c;
-    color: black;
+    color: white;
 }
 
 #bio{
