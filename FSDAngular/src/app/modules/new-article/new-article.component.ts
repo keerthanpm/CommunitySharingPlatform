@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder,Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import {NewarticleService} from '../../newarticle.service'
 
 
 @Component({
@@ -26,7 +27,7 @@ isSubmitting=false;
   get userName(){
     return this.registrationForm.get('articleTittle');
   }
-  constructor(private fb: FormBuilder ){
+  constructor(private fb: FormBuilder, private newarticle: NewarticleService ){
     this.registrationForm = fb.group({
       'articleAbout':['',[Validators.required, Validators.minLength(3)]],
       'articleTittle':['',[Validators.required]],
@@ -42,7 +43,8 @@ isSubmitting=false;
      
       
       console.log(this.registrationForm.value)
-      
+      console.log(this.registrationForm.value.articleTittle)
+      this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle)
       alert('Signup successful please login');
      
     }
