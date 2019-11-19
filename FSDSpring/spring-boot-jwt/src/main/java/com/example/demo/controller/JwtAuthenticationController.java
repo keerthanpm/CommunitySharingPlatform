@@ -21,6 +21,7 @@ import com.example.demo.service.JwtUserDetailsService;
 
 @RestController
 @CrossOrigin
+@RequestMapping("user")
 public class JwtAuthenticationController {
 	
 	@Autowired

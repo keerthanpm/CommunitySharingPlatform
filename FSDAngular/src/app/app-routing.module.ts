@@ -11,6 +11,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { NewArticleComponent } from './modules/new-article/new-article.component';
 import { SettingsComponent } from './modules/settings/settings.component';
 import { ProfileComponent } from './modules/profile/profile.component';
+import { AuthGaurdService } from './service/auth-gaurd.service';
 
 
 const routes: Routes = [{
@@ -28,7 +29,8 @@ const routes: Routes = [{
       
     },{
       path:'yourfeed',
-      component:YourfeedComponent
+      component:YourfeedComponent,
+      canActivate:[AuthGaurdService]
     }]
   },{
     path:'signup',
@@ -41,6 +43,7 @@ const routes: Routes = [{
 },{
   path:'dashboard',
   component:Layout1Component,
+  canActivate:[AuthGaurdService],
   children:[{
     path:'',
     component: DashboardComponent,
@@ -53,17 +56,21 @@ const routes: Routes = [{
         
       },{
         path:'yourfeed',
-        component:YourfeedComponent
+        component:YourfeedComponent,
+        canActivate:[AuthGaurdService]
       }]
   },{
     path:'newarticle',
-    component:NewArticleComponent
+    component:NewArticleComponent,
+    canActivate:[AuthGaurdService]
   },{
     path:'settings',
-    component:SettingsComponent
+    component:SettingsComponent,
+    canActivate:[AuthGaurdService]
   },{
     path:'profile',
-    component:ProfileComponent
+    component:ProfileComponent,
+    canActivate:[AuthGaurdService]
   }]
 }]
  

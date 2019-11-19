@@ -10,7 +10,7 @@
       <form [formGroup]="loginForm" (ngSubmit)="onlogin(loginForm.value)">
         <div class="form-group">
           <input [class.is-invalid]="loginForm.get('userName1').invalid && loginForm.get('userName1').touched"
-            formControlName="userName1" type="text" class="form-control form-control-lg" placeholder="User Name">
+            formControlName="userName1" type="text" [(ngModel)]="user.username" class="form-control form-control-lg" placeholder="User Name">
           <div id="label1" *ngIf="loginForm.get('userName1').invalid && loginForm.get('userName1').touched">
             <small *ngIf="loginForm.get('userName1').errors?.minlength" class="text-danger">Minimum 3
               character
@@ -27,7 +27,7 @@
         <div class="form-group">
 
           <input [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched"
-            formControlName="password" type="password" class="form-control form-control-lg" placeholder="Password">
+            formControlName="password" type="password" [(ngModel)]="user.password" class="form-control form-control-lg" placeholder="Password">
           <div id="label1" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
             <small *ngIf="loginForm.get('password').errors?.required" class="text-danger">Password is
               required</small>
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!loginForm.valid" id="button1" routerLink="/dashboard">Sign In</button>
+        <button class="btn btn-lg btn btn-success" [disabled]="!loginForm.valid" id="button1" (click)="login()" >Sign In</button>
       </form>
     </div>
   </main>
