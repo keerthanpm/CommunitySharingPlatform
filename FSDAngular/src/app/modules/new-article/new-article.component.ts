@@ -45,7 +45,7 @@ isSubmitting=false;
       console.log(this.registrationForm.value)
       console.log(this.registrationForm.value.articleTittle)
       this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle)
-      alert('Signup successful please login');
+      alert('New Article posted successfully');
      
     }
   
