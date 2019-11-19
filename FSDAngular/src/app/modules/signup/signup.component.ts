@@ -5,7 +5,8 @@ import { PasswordValidator } from './shared/password.validator';
 import {UsernameServiceService} from '../../username-service.service';
 import { stringify } from '@angular/compiler/src/util';
 import { Router } from '@angular/router';
-import{ SignupService} from '../../signup.service';
+import { SignupService, User } from 'src/app/service/signup.service';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -21,11 +22,11 @@ email:string="";
 post:any;
 isSubmitting=false;
 
-
+  user:User=new User("","");
   get userName(){
     return this.registrationForm.get('userName1');
   }
-  constructor(private fb: FormBuilder,private data: UsernameServiceService,private router: Router,private _signUpService: SignupService ){
+  constructor(private fb: FormBuilder,private router: Router,private signupService:SignupService ){
     this.registrationForm = fb.group({
       'email':['',[Validators.required, Validators.email]],
       'userName1':['',[Validators.required, Validators.minLength(3),forbiddenNameValidator(/password/)]],
@@ -34,17 +35,12 @@ isSubmitting=false;
     },{'validator':PasswordValidator});
   }
    
-  
-    onRegister(post){
-      this.isSubmitting=true;
-      let formObj = this.registrationForm.getRawValue(); 
-      this._signUpService.signup(formObj)
-      
-      console.log(this.registrationForm.value)
-      this.data.changeMessage(this.registrationForm.value.userName1);
-      alert('Signup successful please login');
-      this.router.navigate(['/login']);
-    }
+  register(user){
+    this.signupService.register(user).subscribe(response=>{
+      alert("Sign Up Successfull");
+      this.router.navigate(['login']);
+    })
 
-  
+  }
+
 }

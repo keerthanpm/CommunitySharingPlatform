@@ -21,7 +21,7 @@
       <div class="form-group"> 
         <input
           [class.is-invalid]="registrationForm.get('userName1').invalid && registrationForm.get('userName1').touched"
-          formControlName="userName1" type="text" class="form-control form-control-lg" placeholder="User Name" >
+          formControlName="userName1" type="text" [(ngModel)]="user.username" class="form-control form-control-lg" placeholder="User Name" >
         <div id="label1" *ngIf="registrationForm.get('userName1').invalid && registrationForm.get('userName1').touched">
           <small *ngIf="registrationForm.get('userName1').errors?.minlength" class="text-danger">Minimum 3 character
             required</small>
@@ -34,7 +34,7 @@
       <div class="form-group">
         <!-- <label id="label1">Password</label> -->
         <input [class.is-invalid]="registrationForm.get('password').invalid && registrationForm.get('password').touched"
-        formControlName="password" type="password" class="form-control form-control-lg" placeholder="Password" >
+        formControlName="password" type="password" [(ngModel)]="user.password" class="form-control form-control-lg" placeholder="Password" >
         <div id="label1" *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched">
           <small *ngIf="registrationForm.get('password').errors?.required" class="text-danger">Password is required</small>
           <small *ngIf="registrationForm.get('password').errors?.minlength" class="text-danger">Minimum 8 character
@@ -52,7 +52,7 @@
       </div>
 
       <div>
-        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!registrationForm.valid" id="button1" >Sign  Up</button>
+        <button class="btn btn-lg btn btn-success" [disabled]="!registrationForm.valid" id="button1" (click)="register(user)">Sign  Up</button>
       </div>
        
     </form>
