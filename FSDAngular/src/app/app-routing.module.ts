@@ -52,7 +52,8 @@ const routes: Routes = [{
         component:YourfeedComponent
       },{
         path:'globalfeed',
-        component:GlobalfeedComponent
+        component:GlobalfeedComponent,
+        canActivate:[AuthGaurdService]
         
       },{
         path:'yourfeed',

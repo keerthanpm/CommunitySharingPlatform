@@ -22,7 +22,7 @@ export class AuthenticationService {
      map(
        userData => {
         sessionStorage.setItem('username',username);
-        let tokenStr= 'Bearer '+userData.token;
+        let tokenStr= 'Bearer '+userData.jwttoken;
         sessionStorage.setItem('token', tokenStr);
         return userData;
        }

@@ -9,6 +9,7 @@ export class BasicAuthHtppInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): import("rxjs").Observable<import("@angular/common/http").HttpEvent<any>> {
 
     if (sessionStorage.getItem('username') && sessionStorage.getItem('token')) {
+      console.log('Inside HTTP Interceptor')
       req = req.clone({
         setHeaders: {
           Authorization: sessionStorage.getItem('token')

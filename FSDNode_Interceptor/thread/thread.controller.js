@@ -22,8 +22,7 @@ function createThread(req, res, next) {
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
-                    let json = JSON.parse(body);
-                    res.json(json);
+                    res.sendStatus(200);
                 }else{
                     res.sendStatus(response.statusCode);
                 }
@@ -41,8 +40,7 @@ function createPost(req, res, next) {
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
-                    let json = JSON.parse(body);
-                    res.json(json);
+                    res.sendStatus(200)
                 }else{
                     res.sendStatus(response.statusCode);
                 }
