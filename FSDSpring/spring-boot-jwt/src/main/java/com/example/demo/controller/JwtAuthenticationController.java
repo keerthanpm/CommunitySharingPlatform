@@ -8,15 +8,18 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.config.JwtTokenUtil;
 import com.example.demo.model.JwtRequest;
 import com.example.demo.model.JwtResponse;
 import com.example.demo.model.UserDTO;
+import com.example.demo.model.UserExist;
 import com.example.demo.service.JwtUserDetailsService;
 
 @RestController
@@ -45,6 +48,19 @@ public class JwtAuthenticationController {
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
 		return ResponseEntity.ok(userDetailsService.save(user));
+		
+	}
+	
+	@RequestMapping(value = "/usercheck/{username}", method = RequestMethod.GET)
+	public UserExist check(@PathVariable("username") String username) {
+		UserDetails userDetails= userDetailsService.loadUserByUsername(username);
+		if(!(userDetails==null)) {
+			UserExist userExist=new UserExist("true");
+			return userExist;
+		}
+		UserExist userExist=new UserExist("false");
+		return userExist;
+		
 	}
 
 	private void authenticate(String username, String password) throws Exception {
