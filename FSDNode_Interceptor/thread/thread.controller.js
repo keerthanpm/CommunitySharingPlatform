@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const request = require('request');
-
+const jwt = require('_helpers/jwt');
 
 router.post('/create', createThread);
 router.post('/post', createPost);
@@ -12,6 +12,7 @@ router.get('/yourfeed',yourfeed);
 
 
 function createThread(req, res, next) {    
+   
     if(req.body.title && req.body.post&&req.body.userId) {
         request.post(
             'http://localhost:4000/thread/create',
@@ -74,6 +75,7 @@ function get (req, res, next) {
         });
     }
 }
+
 
 
 function search(req,res){
