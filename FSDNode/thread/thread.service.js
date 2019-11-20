@@ -15,7 +15,8 @@ async function createThread (title, post,id ) {
     const thread = new Thread({
         title: title,
         post: post,
-        userId: id,
+        username: id,
+        date: Date.now()
         
            
         
@@ -33,7 +34,7 @@ async function createThread (title, post,id ) {
 }
 
 async function createPost (threadId, post,id) {
-    return await Thread.findOneAndUpdate(threadId, {$push: {comment: {post:post,user_id:id}}}).then(success => {
+    return await Thread.findOneAndUpdate(threadId, {$push: {comment: {post:post,username:id,date:Date.now()}}}).then(success => {
         return axios.post('http://127.0.0.1:5000/incr', {
             name: threadId
         }).then(resp => {

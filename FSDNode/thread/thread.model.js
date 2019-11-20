@@ -3,7 +3,8 @@ const  mongoose =  require('mongoose');
 const threadModel = mongoose.Schema({
     title: String,
     post: String,
-    userId: String,
+    date: Date,
+    username: String,
     likes:  [
         {
             type: String, sparse:true
@@ -11,7 +12,8 @@ const threadModel = mongoose.Schema({
     ] ,
     comment: { type : Array , "comment" : [{
        post: String,
-       user_id: Number
+       username: Number,
+       date: Date
 
 }]
 
