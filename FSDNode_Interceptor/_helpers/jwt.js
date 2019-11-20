@@ -1,8 +1,6 @@
 const expressJwt = require('express-jwt');
 const config = require('config.json');
-
-
-
+module.exports=jwt;
 
 function jwt() {
     const secret = config.secret;
@@ -13,7 +11,7 @@ function jwt() {
             //'/users/register',
             //'/thread/create',
            // '/thread/post',
-            //'/thread/get'
+            '/thread/get'
         ]
     });
 }
