@@ -9,8 +9,8 @@ function jwt() {
     return expressJwt({ secret: new Buffer(secret, 'base64') }).unless({
         path: [
             // public routes that don't require authentication
-            '/users/authenticate',
-            '/users/register',
+            //'/users/authenticate',
+            //'/users/register',
             //'/thread/create',
            // '/thread/post',
             //'/thread/get'
