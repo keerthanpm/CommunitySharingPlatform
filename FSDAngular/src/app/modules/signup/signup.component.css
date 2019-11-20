@@ -24,13 +24,11 @@ small{
     
 }
 ::placeholder{
-    /* font-size: 18px; */
-   font-family: sans-serif;
-   color:#919191;
-   line-height: 25px;
-   font-size: 1.25rem;
-   
-}
+    font-size: 18px;
+    font-family: sans-serif;
+    color:#919191;
+    line-height: 25px;
+ }
 a{
     color:#5cb85c;
 }
