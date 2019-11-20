@@ -15,7 +15,7 @@ function createThread(req, res, next) {
    
     if(req.body.title && req.body.post&&req.body.userId) {
         request.post(
-            'http://localhost:4000/thread/create',
+            'http://localhost:5000/thread/create',
             { json: { title: req.body.title,
                 post: req.body.post,
                 userId: req.body.userId
@@ -34,7 +34,7 @@ function createThread(req, res, next) {
 function createPost(req, res, next) {
     if(req.body.threadId && req.body.post && req.body.userId) {
         request.post(
-            'http://localhost:4000/thread/post',
+            'http://localhost:5000/thread/post',
             { json: { threadId: req.body.threadId,
                 post: req.body.post,
                 userId: req.body.userId
@@ -55,7 +55,7 @@ function createPost(req, res, next) {
 
 function get (req, res, next) {
     
-    let url = 'http://localhost:4000/thread/get'
+    let url = 'http://localhost:5000/thread/get'
     if(req.query.threadId) {
        
         var propertiesObject = { threadId: req.query.threadId };
@@ -80,7 +80,7 @@ function get (req, res, next) {
 
 function search(req,res){
     if(req.query.searchTerm){
-        let url = 'http://localhost:4000/thread/search'
+        let url = 'http://localhost:5000/thread/search'
     
        
         var propertiesObject = { searchTerm: req.query.searchTerm };
@@ -99,7 +99,7 @@ function like(req,res){
     if(req.body.id&& req.body.threadId){
         
         request.post(
-            'http://localhost:4000/thread/like',
+            'http://localhost:5000/thread/like',
             { json: { id: req.body.id,
                 threadId: req.body.threadId
                 
@@ -122,7 +122,7 @@ function like(req,res){
 }
 function yourfeed(req,res){
     if(req.query.userId){
-        let url = 'http://localhost:4000/thread/yourfeed'
+        let url = 'http://localhost:5000/thread/yourfeed'
     
        
         var propertiesObject = { userId: req.query.userId };

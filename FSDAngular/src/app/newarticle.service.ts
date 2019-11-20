@@ -11,7 +11,7 @@ export class NewarticleService {
     let body = {
       title: title,
       post: post,
-      userId: 211
+      userId: sessionStorage.getItem("username")
     }
     
     this.httpClient.post(this.REST_LIKE_ROUTE, body).subscribe();
