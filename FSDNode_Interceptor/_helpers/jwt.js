@@ -19,7 +19,7 @@ function jwt() {
 }
 
 async function isRevoked(req, payload, done) {
-   let url = 'http://localhost:4000/thread/get'
+   let url = 'http://localhost:8888/user/usercheck/'
     let user = null;
        
         var propertiesObject = { username: payload.sub };
@@ -30,7 +30,7 @@ async function isRevoked(req, payload, done) {
         });
     
     // revoke token if user no longer exists
-    if (!user) {
+    if (user.userexist=="false") {
         return done(null, true);
     }
 
