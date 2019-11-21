@@ -8,7 +8,10 @@ module.exports = {
     get,
     getAll, 
     like,
-    yourfeed    
+    yourfeed,
+    deleteThread,
+    updateThread,
+    myPosts
 };
 
 async function createThread (title, post,id ) {
@@ -94,4 +97,35 @@ async function like (id,threadId) {
         })
     
 }
+async function deleteThread(threadId){
+    
+    return Thread.findByIdAndDelete(threadId).catch(error=>{
+        
+    }).catch(error=>{
+        console.log(error);
+    })
+}
+
+async function updateThread(threadId,newpost){
+   
+   console.log(threadId);
+   console.log(newpost);
+    return await Thread.findByIdAndUpdate(threadId, {$set: {post:newpost}}).then(success => {
+        res.sendStatus(200);
+     }).catch(error=>{
+         res.send(500)
+     })
+}
+async function myPosts (id){
+    
+    return await Thread.find({ "username":{$in: id}  }).then(
+        thread => {
+            console.log(thread)
+            return thread;
+        }).catch(error => {
+            return error;            
+        });
+    
+}
+
 

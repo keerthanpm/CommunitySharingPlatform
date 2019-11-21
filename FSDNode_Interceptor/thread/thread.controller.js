@@ -9,6 +9,9 @@ router.get('/get', get);
 router.get('/search',search);
 router.post('/like', like);
 router.get('/yourfeed',yourfeed);
+router.get('/deleteThread',deleteThread);
+router.get('/myPosts',myPosts);
+router.post('/updateThread', updateThread);
 
 
 function createThread(req, res, next) {    
@@ -136,6 +139,56 @@ function yourfeed(req,res){
     res.sendStatus(400);
 }
 }
+function deleteThread(req,res){
+    if(req.query.threadId){
+        let url = 'http://localhost:5000/thread/deleteThread'
+    
+      // console.log('here in interceptor');
+        var propertiesObject = { threadId: req.query.threadId };
 
+        request({url:url, qs:propertiesObject}, function(err, response, body) {
+          if(err) { res.send(err); return; }
+          res.send(200);
+        });
+
+}else{
+    res.sendStatus(400);
+}
+}
+function myPosts(req,res){
+    if(req.query.userId){
+        let url = 'http://localhost:5000/thread/myPosts'
+    
+       
+        var propertiesObject = { userId: req.query.userId };
+
+        request({url:url, qs:propertiesObject}, function(err, response, body) {
+          if(err) { res.send(err); return; }
+          let json = JSON.parse(body);
+          res.json(json);
+        });
+
+}else{
+    res.sendStatus(400);
+}
+}
+function updateThread(req, res, next) {    
+   
+    if(req.body.threadId && req.body.post) {
+        request.post(
+            'http://localhost:5000/thread/updateThread',
+            { json: { threadId: req.body.threadId,
+                post: req.body.post,
+                userId: req.body.userId
+             } },
+            function (error, response, body) {
+                if (!error && response.statusCode == 200) {
+                    res.sendStatus(200);
+                }else{
+                    res.sendStatus(response.statusCode);
+                }
+            }
+        );
+    }}
 
 module.exports = router;

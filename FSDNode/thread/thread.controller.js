@@ -8,6 +8,9 @@ router.get('/get', get);
 router.get('/search',search);
 router.post('/like', like);
 router.get('/yourfeed',yourfeed);
+router.get('/deleteThread', deleteThread)
+router.post('/updateThread', updateThread)
+router.get('/myPosts', myPosts)
 
 
 function createThread(req, res, next) {    
@@ -82,8 +85,34 @@ function yourfeed(req,res){
 
 }else{
     res.sendStatus(400);
+}}
+function deleteThread(req,res){
+    if(req.query.threadId){
+        threadService.deleteThread(req.query.threadId).then(thread=>{res.send(200)}).catch(err=>res.send(err))
+    }
+    else{
+            res.send(400);
+    }
 }
+function updateThread(req,res){
+    if(req.body.threadId,req.body.post){
+       
+        threadService.updateThread(req.body.threadId,req.body.post).then(thread=>{res.send(200)}).catch(err=>res.send(err))
+    }
+    else{
+            res.send(400);
+    }
 }
+function myPosts(req,res){
+    if(req.query.userId){
+        
+        threadService.myPosts(req.query.userId).then(thread => { res.json(thread)})
+        .catch(err => next(err))
+
+}else{
+    res.sendStatus(400);
+}}
+
 
 
 module.exports = router;
