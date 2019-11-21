@@ -76,6 +76,9 @@ const routes: Routes = [{
     path:'profile',
     component:ProfileComponent,
     canActivate:[AuthGaurdService]
+  },{
+    path:'search',
+    component:SearchComponent
   }]
 }]
  
