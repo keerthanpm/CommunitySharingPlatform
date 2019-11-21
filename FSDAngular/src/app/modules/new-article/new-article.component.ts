@@ -27,7 +27,7 @@ isSubmitting=false;
   get userName(){
     return this.registrationForm.get('articleTittle');
   }
-  constructor(private fb: FormBuilder, private newarticle: NewarticleService ){
+  constructor(private fb: FormBuilder, private newarticle: NewarticleService,private router:Router ){
     this.registrationForm = fb.group({
       'articleAbout':['',[Validators.required, Validators.minLength(3)]],
       'articleTittle':['',[Validators.required]],
@@ -46,6 +46,7 @@ isSubmitting=false;
       console.log(this.registrationForm.value.articleTittle)
       this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle)
       alert('New Article posted successfully');
+      this.router.navigate(['/dashboard/globalfeed'])
      
     }
   
