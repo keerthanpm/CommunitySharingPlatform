@@ -82,6 +82,9 @@ const routes: Routes = [{
     path:'article',
     component:ArticleComponent
 
+},{
+  path:'search',
+  component:SearchComponent
 }]
 }]
  
