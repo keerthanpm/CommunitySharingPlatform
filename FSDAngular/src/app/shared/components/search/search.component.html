@@ -1,0 +1,31 @@
+<div class="article-preview" *ngFor="let search of searcharr|keyvalue">
+    <div class="article-meta">
+        <a href="Username">
+                <img src="assets/images/smiley-cyrus.jpg">
+        </a>
+        
+        <div class="info">
+            <a class="author" href="/profile/username"> {{search.value.username}} </a>
+            <span class="date"> November 2, 2019 </span>
+
+        </div>
+        <div id="app-favorite-button" class="pull-xs-right">
+                
+                        <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
+                          <span class="glyphicon glyphicon-thumbs-up"></span> Like 
+                        </button>
+                      
+            </div>
+            <div>
+                <h3>{{search.value.title}}</h3>
+            </div>
+            <div>
+                <h6>
+                    {{search.value.post}}
+                </h6>
+            </div>
+            <hr>
+</div>    
+   
+ </div>
+

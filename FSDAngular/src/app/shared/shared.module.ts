@@ -9,7 +9,9 @@ import { YourfeedComponent } from './components/yourfeed/yourfeed.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import { Header1Component } from './components/header1/header1.component';
-
+import { SearchComponent } from './components/search/search.component';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import { Header1Component } from './components/header1/header1.component';
     FooterComponent,
     GlobalfeedComponent,
     YourfeedComponent,
-    Header1Component
+    Header1Component,
+    SearchComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FlexLayoutModule,
     MatToolbarModule,
-    MatTabsModule
+    MatTabsModule,
+    HttpClientModule,
+    FormsModule
   ],
   exports:[
     HeaderComponent,
@@ -33,7 +38,9 @@ import { Header1Component } from './components/header1/header1.component';
     YourfeedComponent,
     MatTabsModule,
     MatToolbarModule,
-    Header1Component
+    Header1Component,
+    SearchComponent,
+    
   ]
 })
 export class SharedModule { }

@@ -12,6 +12,7 @@ import { NewArticleComponent } from './modules/new-article/new-article.component
 import { SettingsComponent } from './modules/settings/settings.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
+import { SearchComponent } from './shared/components/search/search.component';
 
 
 const routes: Routes = [{
@@ -38,6 +39,9 @@ const routes: Routes = [{
   },{
     path:'login',
     component:LoginComponent
+  },{
+    path:'search',
+    component:SearchComponent
   }]
   
 },{

@@ -29,9 +29,19 @@
                             </li>
                         </ul> -->
                         <form class="navbar-form navbar-left" target="_self">
+                            <!-- <div class="form-group">
+                                <label class="control-label" for="searchterm"><i class="glyphicon glyphicon-search" (click)="search(searchterm)"></i></label>
+                                <input class="form-control searchterm" type="search" [(ngModel)]="searchterm" name="searchterm" id="search-field">
+                            </div> -->
+                            <!-- <form class="navbar-form navbar-left" target="_self">
+                                <div class="form-group">
+                                    <label class="control-label" for="search-field"><i class="glyphicon glyphicon-search"></i></label>
+                                    <input class="form-control search-field" type="search" name="search" id="search-field">
+                                </div>
+                            </form> -->
                             <div class="form-group">
-                                <label class="control-label" for="search-field"><i class="glyphicon glyphicon-search"></i></label>
-                                <input class="form-control search-field" type="search" name="search" id="search-field">
+                                <label class="control-label" for="search-field"><i class="glyphicon glyphicon-search" (click)="search(searchterm)" ></i></label>
+                                <input class="form-control search-field" [(ngModel)]="searchterm" type="search" name="search" id="search-field">
                             </div>
                         </form>
                         <p class="navbar-text navbar-right"><a class="navbar-link login" routerLink="/">Home</a><a class="navbar-link login" routerLink="/login">Log In</a> <a class="navbar-link login" routerLink="/signup">Sign Up</a></p>

@@ -9,7 +9,7 @@ function jwt() {
             // public routes that don't require authentication
             //'/users/authenticate',
             //'/users/register',
-            //'/thread/create',
+            '/thread/search',
            // '/thread/post',
             '/thread/get'
         ]
