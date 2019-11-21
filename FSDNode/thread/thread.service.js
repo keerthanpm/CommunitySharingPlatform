@@ -34,15 +34,11 @@ async function createThread (title, post,id ) {
 }
 
 async function createPost (threadId, post,id) {
-    return await Thread.findOneAndUpdate(threadId, {$push: {comment: {post:post,username:id,date:Date.now()}}}).then(success => {
-        return axios.post('http://127.0.0.1:5000/incr', {
-            name: threadId
-        }).then(resp => {
-            return resp.data.value;
-        })
-        .catch(error => {
-            console.log(error);            
-        })
+    console.log('Id of thread:'+threadId)
+    return await Thread.findByIdAndUpdate(threadId, {$push: {comment: {post:post,username:id,date:Date.now()}}}).then(success => {
+       res.sendStatus(200);
+    }).catch(error=>{
+        res.send(500)
     })
 }
 

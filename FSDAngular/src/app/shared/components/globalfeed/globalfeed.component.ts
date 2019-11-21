@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobaldataService } from '../../../globaldata.service';
+import { Router } from '@angular/router';
+import { PostService } from 'src/app/post.service';
 @Component({
   selector: 'app-globalfeed',
   templateUrl: './globalfeed.component.html',
@@ -8,12 +10,29 @@ import { GlobaldataService } from '../../../globaldata.service';
 export class GlobalfeedComponent implements OnInit {
   posts = [];
   likes;
-  constructor(private globaldataservice: GlobaldataService) { }
-  myClickFunction(event,userId,threadId) { 
-    
+  route(id){
+    console.log("Post id"+id)
+    if(sessionStorage.getItem(id)){
+      sessionStorage.removeItem("id");
+    }
+    sessionStorage.setItem("id",id);
+    this.idService.putid(id);
+    console.log(id)
+    this.router.navigate(['/dashboard/article']);
+  }
+  constructor(private globaldataservice: GlobaldataService,private router:Router,private idService:PostService) { }
+  myClickFunction(event,threadId) { 
+   
     //just added console.log which will display the event details in browser on click of the button.
-    this.globaldataservice.postLike(userId,threadId);
-    
+    this.globaldataservice.postLike(threadId);
+  
+    this.globaldataservice.sendGetRequest().subscribe((data: any[])=>{
+    this.posts = data;
+  
+      
+  });
+  
+  
   }
   
   ngOnInit() {
@@ -22,6 +41,7 @@ export class GlobalfeedComponent implements OnInit {
       this.posts = data;
       
   });
+  
   
   
 }

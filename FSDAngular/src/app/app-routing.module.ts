@@ -1,3 +1,4 @@
+import { ArticleComponent } from './modules/article/article.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layout/default/default.component';
@@ -12,6 +13,7 @@ import { NewArticleComponent } from './modules/new-article/new-article.component
 import { SettingsComponent } from './modules/settings/settings.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
+
 
 
 const routes: Routes = [{
@@ -72,7 +74,11 @@ const routes: Routes = [{
     path:'profile',
     component:ProfileComponent,
     canActivate:[AuthGaurdService]
-  }]
+  },{
+    path:'article',
+    component:ArticleComponent
+
+}]
 }]
  
   

@@ -16,19 +16,19 @@
             </a>
             
             <div class="info">
-                <a class="author" href="/profile/username"> {{post.userId}} </a>
+                <a class="author" href="/profile/username"> {{post._id}} </a>
                 <span class="date"> November 2, 2019 </span>
     
             </div>
             <div id="app-favorite-button" class="pull-xs-right">
                     
-                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
+                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,post._id)">
                               <span class="glyphicon glyphicon-thumbs-up"></span> Like ({{post.likes.length}})
                             </button>
                           
                 </div>
                 <div>
-                    <h3>{{post.title}}</h3>
+                    <a (click)="route(post._id)"><h3>{{post.title}}</h3></a>
                 </div>
                 <div>
                     <h6>

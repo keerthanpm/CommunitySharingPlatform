@@ -1,0 +1,65 @@
+<div class="banner">
+    <div class="container">
+        <h1>{{post.title}}</h1>
+        <div class="article-meta">
+            <a href="Username">
+                <img src="../../assets/images/smiley-cyrus.jpg">
+            </a>
+
+            <div class="info">
+                <a class="author" href="/profile/username"> {{post.username}} </a>
+                <span class="date"> {{post.date}} </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="article-body">
+    <div class="container">
+        <h4>{{post.post}}</h4>
+</div>
+                <br><hr>
+    <div class="container">
+
+
+        <div class="row bootstrap snippets">
+                <div >
+                    <div class="comment-wrapper">
+                        <div class="panel panel-info">
+                            
+                            <div class="panel-body">
+                                <textarea class="form-control" placeholder="write a comment..." rows="4" [(ngModel)]="comment"></textarea>
+                                <br>
+                                <button type="button" class="btn btn-success pull-right" (click)="PostComment(post._id,comment)">Post Comment</button>
+                                <div class="clearfix"></div>
+                                <hr>
+                                <div *ngFor="let c of post.comment">
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <a href="#" class="pull-left">
+                                            <img src="../../../assets/images/smiley-cyrus.jpg" alt="" class="img-circle">
+                                        </a>
+                                        <div class="media-body">
+                                            <span class="text-muted pull-right">
+                                                <small class="text-muted">{{c.date}}</small>
+                                            </span>
+                                            <strong class="text-success">{{c.username}}</strong>
+                                            <p>
+                                               {{c.post}} 
+                                            </p>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                </ul></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+    </div>
+
+
+</div>
+

@@ -17,7 +17,7 @@ export class GlobaldataService {
     return this.httpClient.get(this.REST_API_SERVER);
    
   }
-  public postLike(userId, threadId){
+  public postLike( threadId){
     
     let body = {
       id: sessionStorage.getItem('username'),

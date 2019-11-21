@@ -18,11 +18,13 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { NewArticleComponent } from './modules/new-article/new-article.component';
 import { SettingsComponent } from './modules/settings/settings.component';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-htpp-interceptor.service';
+import { ArticleComponent } from './modules/article/article.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,
