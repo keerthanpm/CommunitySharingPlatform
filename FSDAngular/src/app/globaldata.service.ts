@@ -20,8 +20,9 @@ export class GlobaldataService {
   public postLike(userId, threadId){
     
     let body = {
-      id: userId,
+      id: sessionStorage.getItem('username'),
       threadId: threadId
+      
     }
     
     this.httpClient.post(this.REST_LIKE_ROUTE, body).subscribe();

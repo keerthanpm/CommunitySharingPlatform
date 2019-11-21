@@ -64,6 +64,7 @@ function like(req,res){
         
         let like_id = req.body.id;
         let threadId = req.body.threadId;
+       
         threadService.like(like_id,threadId).then((value) => {            
             res.json({value});
         }).catch(err => console.log(err))

@@ -12,7 +12,7 @@ const threadModel = mongoose.Schema({
     ] ,
     comment: { type : Array , "comment" : [{
        post: String,
-       username: Number,
+       username: String,
        date: Date
 
 }]

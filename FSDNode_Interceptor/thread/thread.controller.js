@@ -94,21 +94,22 @@ function search(req,res){
 }
 }
 function like(req,res){
-    if(req.body.id&& req.body.threadId){
+    if(req.body.id&& req.body.threadId ){
         
         request.post(
             'http://localhost:5000/thread/like',
             { json: { id: req.body.id,
-                threadId: req.body.threadId
+                threadId: req.body.threadId,
+                
                 
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
-                    let json = JSON.parse(body);
+                   // let json = JSON.parse(body);
                    
-                    res.json(json);
+                    res.json(200);
                 }else{
-                    res.sendStatus(response.statusCode);
+                    res.sendStatus(500);
                 }
             }
         );
