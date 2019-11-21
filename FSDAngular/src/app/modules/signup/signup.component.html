@@ -11,7 +11,7 @@
         
       <div class="form-group">
         <input [class.is-invalid]="registrationForm.get('email').invalid && registrationForm.get('email').touched"
-          formControlName="email" type="email" class="form-control form-control-lg" placeholder="Email" >
+          formControlName="email" type="email" [(ngModel)]="user.email" class="form-control form-control-lg" placeholder="Email" >
         <div id="label1" *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched">
           <small *ngIf="registrationForm.get('email').errors?.required" class="text-danger">Email is required</small>
           <small *ngIf="registrationForm.get('email').errors?.email" class="text-danger">Email must be a valid email

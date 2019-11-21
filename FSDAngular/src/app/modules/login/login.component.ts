@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import { UsernameServiceService } from '../../username-service.service';
 //import {LoginService} from '../../login.service'
 import { FormBuilder,Validators, FormGroup } from '@angular/forms';
-import { User } from 'src/app/service/signup.service';
+import { User, User1 } from 'src/app/service/signup.service';
 import { AuthenticationService } from 'src/app/service/authentication.service';
 import { Router } from '@angular/router';
 
@@ -19,7 +19,7 @@ password:string="";
 post:any;
 isSubmitting=false;
 
-user:User=new User("","")
+user:User1=new User1("","")
 
   
   constructor(private fb: FormBuilder,private loginService:AuthenticationService,private router:Router){

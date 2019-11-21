@@ -4,7 +4,14 @@ import { Router } from '@angular/router';
 export class User{
   constructor(
     public username:string,
-    public password:string
+    public password:string,
+    public email:string
+  ){}
+}
+export class User1{
+  constructor(
+    public username:string,
+    public password:string,
   ){}
 }
 @Injectable({

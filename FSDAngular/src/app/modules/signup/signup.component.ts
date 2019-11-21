@@ -22,7 +22,7 @@ email:string="";
 post:any;
 isSubmitting=false;
 
-  user:User=new User("","");
+  user:User=new User("","","");
   get userName(){
     return this.registrationForm.get('userName1');
   }
