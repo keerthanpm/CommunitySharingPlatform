@@ -50,6 +50,7 @@ this.getdata();
   
 }
 
+//Fetching URL from the MySQL and adding an attribute in fetched content of MongoDB
 getdata(){
   this.globaldataservice.sendGetRequest().subscribe((data: any[])=>{
     for(let user of data){

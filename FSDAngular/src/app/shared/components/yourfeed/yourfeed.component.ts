@@ -29,6 +29,7 @@ export class YourfeedComponent implements OnInit {
     
     this.getdata();
 }
+//Fetching URL from the MySQL and adding an attribute in fetched content of MongoDB
 getdata(){
   this.yourfeedservice.sendGetRequest().subscribe((data: any[])=>{
     for(let user of data){

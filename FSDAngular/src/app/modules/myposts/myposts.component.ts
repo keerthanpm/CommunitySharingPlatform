@@ -51,7 +51,7 @@ export class MypostsComponent implements OnInit {
   }
 
   
-
+//Fetching URL from the MySQL and adding an attribute in fetched content of MongoDB
   getdata(){
     this.myfeedservice.sendGetRequest().subscribe((data: any[])=>{
       for(let user of data){
