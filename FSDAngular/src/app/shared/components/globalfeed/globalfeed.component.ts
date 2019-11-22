@@ -28,6 +28,8 @@ export class GlobalfeedComponent implements OnInit {
   
     this.globaldataservice.sendGetRequest().subscribe((data: any[])=>{
     this.posts = data;
+    this.ngOnInit();
+    this.ngOnInit();
   
       
   });

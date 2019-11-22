@@ -35,7 +35,7 @@
       <div class="form-group">
         <input id="art3"
          [class.is-invalid]="registrationForm.get('tags').invalid && registrationForm.get('tags').touched"
-          formControlName="tags" type="text" class="form-control form-control-lg" placeholder="Enter tags" >
+          formControlName="tags" type="text" [(ngModel)]="article.tags" class="form-control form-control-lg" placeholder="Enter tags" >
         <div id="label1" *ngIf="registrationForm.get('tags').invalid && registrationForm.get('tags').touched">
           <small *ngIf="registrationForm.get('tags').errors?.required" class="text-danger">Tag is required</small>
         </div>
