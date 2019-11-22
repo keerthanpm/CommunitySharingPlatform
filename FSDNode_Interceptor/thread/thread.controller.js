@@ -16,12 +16,13 @@ router.post('/updateThread', updateThread);
 
 function createThread(req, res, next) {    
    
-    if(req.body.title && req.body.post&&req.body.userId) {
+    if(req.body.title && req.body.post&&req.body.userId&&req.body.tags) {
         request.post(
             'http://localhost:5000/thread/create',
             { json: { title: req.body.title,
                 post: req.body.post,
-                userId: req.body.userId
+                userId: req.body.userId,
+                tags: req.body.tags
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
@@ -174,13 +175,14 @@ function myPosts(req,res){
 }
 function updateThread(req, res, next) {    
    
-    if(req.body.threadId && req.body.post && req.body.title) {
+    if(req.body.threadId && req.body.post && req.body.title && req.body.tags) {
         request.post(
             'http://localhost:5000/thread/updateThread',
             { json: { threadId: req.body.threadId,
                 post: req.body.post,
                 userId: req.body.userId,
-                title: req.body.title
+                title: req.body.title,
+                tags: req.body.tags
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
@@ -190,6 +192,10 @@ function updateThread(req, res, next) {
                 }
             }
         );
-    }}
+    }
+    else{
+        res.sendStatus(400);
+    }
+}
 
 module.exports = router;

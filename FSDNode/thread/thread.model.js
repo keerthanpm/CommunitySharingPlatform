@@ -17,7 +17,8 @@ const threadModel = mongoose.Schema({
 
 }]
 
-}
+},
+tags: String
     
 });
 

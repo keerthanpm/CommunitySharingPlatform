@@ -14,8 +14,8 @@ router.get('/myPosts', myPosts)
 
 
 function createThread(req, res, next) {    
-    if(req.body.title && req.body.post&&req.body.userId) {
-        threadService.createThread(req.body.title, req.body.post,req.body.userId)
+    if(req.body.title && req.body.post&&req.body.userId && req.body.tags) {
+        threadService.createThread(req.body.title, req.body.post,req.body.userId,req.body.tags)
         .then((threadId) => {res.json({threadId});
         })
         .catch(err => next(err))
@@ -95,9 +95,9 @@ function deleteThread(req,res){
     }
 }
 function updateThread(req,res){
-    if(req.body.threadId&&req.body.post&&req.body.title){
+    if(req.body.threadId&&req.body.post&&req.body.title&&req.body.tags){
        
-        threadService.updateThread(req.body.threadId,req.body.post,req.body.title).then(thread=>{res.send(200)}).catch(err=>res.send(err))
+        threadService.updateThread(req.body.threadId,req.body.post,req.body.title,req.body.tags).then(thread=>{res.send(200)}).catch(err=>res.send(err))
     }
     else{
             res.send(400);
