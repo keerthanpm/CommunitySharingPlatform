@@ -16,10 +16,14 @@ export class SearchService {
 
   setResult(res){
     this.searcharr=res;
+    
   }
 
   searchResult(){
     return this.searcharr;
+
   }
+  
 }
+
 

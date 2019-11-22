@@ -12,12 +12,13 @@ export class SearchComponent implements OnInit {
   constructor(private searchService:SearchService) { }
 
   ngOnInit() {
-    
-    
-    this.searcharr=this.searchService.searchResult();
-    console.log("Inside Search component")
-    console.log(this.searcharr)
+    this.fetchdata();
   }
+
+  fetchdata(){
+    this.searcharr=this.searchService.searchResult();
+  }
+
 
 
 }

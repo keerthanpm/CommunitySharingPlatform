@@ -28,12 +28,7 @@ export class MypostsComponent implements OnInit {
   constructor(private myfeedservice: MypostsService,private router:Router,private idService:PostService,private getArticleService:GetarticleService) { }
 
   ngOnInit() {
-    this.myfeedservice.sendGetRequest().subscribe((data: any[])=>{
-      console.log("I am inside mypost")
-      this.posts = data;
-      console.log(this.posts);
-      
-  });
+    this.fetchdata();
   }
 
   editarticle(id){
@@ -45,9 +40,18 @@ export class MypostsComponent implements OnInit {
   }
 
   deletearticle(id){
-    this.getArticleService.deletearticle(id).subscribe(response=>{
-      alert("Deleted Sucessfully...")
-    })
+    this.getArticleService.deletearticle(id).subscribe();
+    alert("Deleted Successfully");
+    this.ngOnInit();
+    this.ngOnInit();
+    
+    
+  }
+
+  fetchdata(){
+    this.myfeedservice.sendGetRequest().subscribe((data: any[])=>{
+      this.posts = data;
+  });
   }
 
 }
