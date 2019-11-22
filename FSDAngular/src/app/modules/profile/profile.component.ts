@@ -20,6 +20,7 @@ export class ProfileComponent implements OnInit {
   getuserdata(){
     this.settingService.getuserdata(sessionStorage.getItem('username')).subscribe(response=>{
       this.user=response;
+      console.log(response)
       
     })
   

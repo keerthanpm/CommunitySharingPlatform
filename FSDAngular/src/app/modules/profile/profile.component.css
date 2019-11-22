@@ -2,8 +2,8 @@
     
     display: inline-block;
     vertical-align: middle;
-    height: 126px;
-    width: 126px;
+    height: 120px;
+    width: 120px;
     border-radius: 90px;
 }
 .article-meta{
@@ -40,3 +40,7 @@ a {
     font-weight: 400;
     display: inline-block;
   }
+.jumbotron{
+    
+
+}

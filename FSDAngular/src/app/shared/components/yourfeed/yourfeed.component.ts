@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { YourfeedService } from '../../../service/yourfeed.service';
 import { Router } from '@angular/router';
 import { PostService } from 'src/app/post.service';
+import { SettingService } from 'src/app/service/setting.service';
 @Component({
   selector: 'app-yourfeed',
   templateUrl: './yourfeed.component.html',
@@ -9,6 +10,7 @@ import { PostService } from 'src/app/post.service';
 })
 export class YourfeedComponent implements OnInit {
   posts = [];
+  username:string
   route(id){
     console.log("Post id"+id)
     if(sessionStorage.getItem(id)){
@@ -20,16 +22,23 @@ export class YourfeedComponent implements OnInit {
     this.router.navigate(['/dashboard/article']);
   }
   
-  constructor(private yourfeedservice: YourfeedService,private router:Router,private idService:PostService) { }
+  constructor(private yourfeedservice: YourfeedService,private router:Router,private idService:PostService,private settingService:SettingService) { }
 
   
   ngOnInit() {
     
-    this.yourfeedservice.sendGetRequest().subscribe((data: any[])=>{
+    this.getdata();
+}
+getdata(){
+  this.yourfeedservice.sendGetRequest().subscribe((data: any[])=>{
+    for(let user of data){
+
+      this.username=user.username
       
-      this.posts = data;
-      console.log(this.posts);
-      
-  });
+      this.settingService.getuserdata(this.username).subscribe(response=>{
+          user['url']=response.url
+    })}
+    this.posts = data;      
+  }) 
 }
 }

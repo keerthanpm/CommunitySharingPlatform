@@ -4,6 +4,7 @@ import { MypostsService } from '../../service/myposts.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetarticleService } from 'src/app/service/getarticle.service';
+import { SettingService } from 'src/app/service/setting.service';
 
 
 
@@ -15,6 +16,7 @@ import { GetarticleService } from 'src/app/service/getarticle.service';
 export class MypostsComponent implements OnInit {
 
   posts = [];
+  username:string
   route(id){
     console.log("Post id"+id)
     if(sessionStorage.getItem(id)){
@@ -25,10 +27,10 @@ export class MypostsComponent implements OnInit {
     console.log(id)
     this.router.navigate(['/dashboard/article']);
   }
-  constructor(private myfeedservice: MypostsService,private router:Router,private idService:PostService,private getArticleService:GetarticleService) { }
+  constructor(private myfeedservice: MypostsService,private router:Router,private idService:PostService,private getArticleService:GetarticleService,private settingService:SettingService) { }
 
   ngOnInit() {
-    this.fetchdata();
+    this.getdata();
   }
 
   editarticle(id){
@@ -48,10 +50,19 @@ export class MypostsComponent implements OnInit {
     
   }
 
-  fetchdata(){
+  
+
+  getdata(){
     this.myfeedservice.sendGetRequest().subscribe((data: any[])=>{
-      this.posts = data;
-  });
+      for(let user of data){
+  
+        this.username=user.username
+        
+        this.settingService.getuserdata(this.username).subscribe(response=>{
+            user['url']=response.url
+      })}
+      this.posts = data;      
+    }) 
   }
 
 }
