@@ -31,6 +31,7 @@ user:User1=new User1("","")
   }
    
     login(){
+      this.errorstring=""
       this.loginService.authenticate(this.user.username,this.user.password).subscribe(response=>{
         this.router.navigate(['/dashboard']);
       },error=>{

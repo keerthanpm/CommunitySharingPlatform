@@ -46,6 +46,7 @@ onsettings(post){
   
  this.user.url=this.settingsForm.value.url
  this.user.bio=this.settingsForm.value.bio
+ this.errorstring=""
 //authenticate before
 this.loginService.authenticate(this.user.username,this.settingsForm.value.password).subscribe(response=>{
   this.settingService.updateuserdata(this.user).subscribe();
