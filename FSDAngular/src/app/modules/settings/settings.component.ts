@@ -54,7 +54,7 @@ this.loginService.authenticate(this.user.username,this.settingsForm.value.passwo
   // this.data.changeMessage(this.settingsForm.value.userName1);
   alert('Update succesful');
 },error=>{
-  this.errorstring="Invalid Password! Please try again"
+  this.errorstring="Incorrect Password! Please try again"
 })
 //  this.settingService.updateuserdata(this.user).subscribe();
 //   // this.data.changeMessage(this.settingsForm.value.userName1);
