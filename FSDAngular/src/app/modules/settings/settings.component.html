@@ -7,24 +7,24 @@
             <form [formGroup]="settingsForm" (ngSubmit)="onsettings(settingsForm.value)">
 
                 <div class="form-group">
-                    <input [class.is-invalid]="settingsForm.get('urlphoto').invalid" formControlName="urlphoto"
-                        type="text" class="form-control form-control-lg" placeholder="URL of profile photo">
-                    <div id="label1" *ngIf="settingsForm.get('urlphoto').invalid">
+                    <input [class.is-invalid]="settingsForm.get('url').invalid" formControlName="url"
+                        type="text" [(ngModel)]="user.url" class="form-control form-control-lg" placeholder="URL of profile photo">
+                    <div id="label1" *ngIf="settingsForm.get('url').invalid">
                     </div>
                 </div>
                 <div class="form-group">
                         <input
-                            [class.is-invalid]="settingsForm.get('userName1').invalid && settingsForm.get('userName1').touched"
-                            formControlName="userName1" type="text" class="form-control form-control-lg"
-                            placeholder="User Name" id="userName1">
+                            [class.is-invalid]="settingsForm.get('username').invalid && settingsForm.get('username').touched"
+                            formControlName="username" type="text" [(ngModel)]="user.username" class="form-control form-control-lg"
+                            placeholder="User Name" id="username">
                         <div id="label1"
-                            *ngIf="settingsForm.get('userName1').invalid && settingsForm.get('userName1').touched">
-                            <small *ngIf="settingsForm.get('userName1').errors?.minlength" class="text-danger">Minimum 3
+                            *ngIf="settingsForm.get('username').invalid && settingsForm.get('username').touched">
+                            <small *ngIf="settingsForm.get('username').errors?.minlength" class="text-danger">Minimum 3
                                 character
                                 required</small>
-                            <small *ngIf="settingsForm.get('userName1').errors?.required" class="text-danger">Name is
+                            <small *ngIf="settingsForm.get('username').errors?.required" class="text-danger">Name is
                                 required</small>
-                            <small *ngIf="settingsForm.get('userName1').errors?.forbiddenName"
+                            <small *ngIf="settingsForm.get('username').errors?.forbiddenName"
                                 class="text-danger">{{userName.errors?.forbiddenName.value}}
                                 userName not allowed</small>
                         </div>
@@ -33,14 +33,14 @@
                
                 <div class="form-group">
                         <textarea id="bio"  [class.is-invalid]="settingsForm.get('bio').invalid && settingsForm.get('bio').touched"
-                          formControlName="bio" type="text" class="form-control form-control-lg" placeholder="Write about yourself" ></textarea>
+                          formControlName="bio" type="text" [(ngModel)]="user.bio" class="form-control form-control-lg" placeholder="Write about yourself" ></textarea>
                         </div>
 
                
  
                 <div class="form-group">
                     <input [class.is-invalid]="settingsForm.get('email').invalid && settingsForm.get('email').touched"
-                        formControlName="email" id="email" type="email" class="form-control form-control-lg" placeholder="Email">
+                        formControlName="email" id="email" type="email" [(ngModel)]="user.email" class="form-control form-control-lg" placeholder="Email">
                     <div id="label1" *ngIf="settingsForm.get('email').invalid && settingsForm.get('email').touched">
                         <small *ngIf="settingsForm.get('email').errors?.required" class="text-danger">Email is
                             required</small>

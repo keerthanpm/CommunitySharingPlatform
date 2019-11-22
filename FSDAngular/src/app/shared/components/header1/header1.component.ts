@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/service/authentication.service';
 import { Router } from '@angular/router';
 import { SearchService } from 'src/app/service/search.service';
+import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-header1',
@@ -10,10 +11,12 @@ import { SearchService } from 'src/app/service/search.service';
 })
 export class Header1Component implements OnInit {
 
+  username="";
   searchterm="";
   constructor(private loginService:AuthenticationService,private router:Router,private searchService:SearchService) { }
 
   ngOnInit() {
+    this.username=sessionStorage.getItem('username');
   }
 
   logout(){

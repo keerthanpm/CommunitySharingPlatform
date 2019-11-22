@@ -34,7 +34,7 @@
                                         <input class="form-control search-field" [(ngModel)]="searchterm" type="search" name="search" id="search-field">
                                     </div>
                         </form>
-                        <p class="navbar-text navbar-right"><a class="navbar-link login" routerLink="/dashboard">Home</a><a class="navbar-link login" routerLink="newarticle">New Article</a><a class="navbar-link login" routerLink="settings">Settings</a> <a class="navbar-link login" routerLink="profile">Profile</a>
+                        <p class="navbar-text navbar-right"><a class="navbar-link login" routerLink="/dashboard">Home</a><a class="navbar-link login" routerLink="newarticle">New Article</a><a class="navbar-link login" routerLink="settings">Settings</a> <a class="navbar-link login" routerLink="profile">{{username}}</a>
                             <a class="navbar-link login" (click)="logout()">LogOut</a></p>
                     </div>
                 </div>

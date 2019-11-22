@@ -14,6 +14,18 @@ export class User1{
     public password:string,
   ){}
 }
+
+export class User2{
+  constructor(
+    
+    public username:string,
+    public password:string,
+    public email:string,
+    public url:string,
+    public bio:string
+  ){}
+
+}
 @Injectable({
   providedIn: 'root'
 })

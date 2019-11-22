@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.config.JwtTokenUtil;
+import com.example.demo.model.DAOUser;
 import com.example.demo.model.JwtRequest;
 import com.example.demo.model.JwtResponse;
 import com.example.demo.model.UserDTO;
@@ -49,6 +50,11 @@ public class JwtAuthenticationController {
 	public ResponseEntity<?> saveUser(@RequestBody UserDTO user) throws Exception {
 		return ResponseEntity.ok(userDetailsService.save(user));
 		
+	}
+	
+	@RequestMapping(value = "/{username}", method = RequestMethod.GET)
+	public DAOUser getUser(@PathVariable("username") String username ) {
+		return userDetailsService.find(username);
 	}
 	
 	@RequestMapping(value = "/usercheck/{username}", method = RequestMethod.GET)

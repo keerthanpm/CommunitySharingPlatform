@@ -23,5 +23,11 @@ public class DAOUser {
 	
 	@JsonIgnore
 	private String password;
+	
+	private String email;
+	
+	private String url;
+	
+	private String bio;
 
 }
