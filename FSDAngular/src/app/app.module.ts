@@ -19,7 +19,7 @@ import { NewArticleComponent } from './modules/new-article/new-article.component
 import { SettingsComponent } from './modules/settings/settings.component';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-htpp-interceptor.service';
 import { ArticleComponent } from './modules/article/article.component';
-import { MypostsComponent } from './myposts/myposts.component';
+import { MypostsComponent } from './modules/myposts/myposts.component';
 
 
 @NgModule({

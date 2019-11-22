@@ -14,7 +14,7 @@ import { SettingsComponent } from './modules/settings/settings.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
 import { SearchComponent } from './shared/components/search/search.component';
-import { MypostsComponent } from './myposts/myposts.component';
+import { MypostsComponent } from './modules/myposts/myposts.component';
 
 
 
