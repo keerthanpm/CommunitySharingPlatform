@@ -106,11 +106,10 @@ async function deleteThread(threadId){
     })
 }
 
-async function updateThread(threadId,newpost,newtitle, tags){
+async function updateThread(threadId,newpost,newtitle, tag){
    
-   console.log(threadId);
-   console.log(newpost);
-    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost, tags: tags}}).then(success => {
+   console.log(tag);
+    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost, tags: tag}}).then(success => {
         res.sendStatus(200);
      }).catch(error=>{
          res.send(500)
