@@ -174,12 +174,13 @@ function myPosts(req,res){
 }
 function updateThread(req, res, next) {    
    
-    if(req.body.threadId && req.body.post) {
+    if(req.body.threadId && req.body.post && req.body.title) {
         request.post(
             'http://localhost:5000/thread/updateThread',
             { json: { threadId: req.body.threadId,
                 post: req.body.post,
-                userId: req.body.userId
+                userId: req.body.userId,
+                title: req.body.title
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {

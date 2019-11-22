@@ -95,9 +95,9 @@ function deleteThread(req,res){
     }
 }
 function updateThread(req,res){
-    if(req.body.threadId,req.body.post){
+    if(req.body.threadId&&req.body.post&&req.body.title){
        
-        threadService.updateThread(req.body.threadId,req.body.post).then(thread=>{res.send(200)}).catch(err=>res.send(err))
+        threadService.updateThread(req.body.threadId,req.body.post,req.body.title).then(thread=>{res.send(200)}).catch(err=>res.send(err))
     }
     else{
             res.send(400);
