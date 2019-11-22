@@ -64,3 +64,11 @@ h3{
 h6{
     font-family: sans-serif
 }
+
+#edit-icon{
+    color:grey;
+    height: 8px;
+}
+#edit-icon:hover{
+    color:black;
+}
