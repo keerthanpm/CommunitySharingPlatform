@@ -14,6 +14,7 @@ import { SettingsComponent } from './modules/settings/settings.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
 import { SearchComponent } from './shared/components/search/search.component';
+import { MypostsComponent } from './myposts/myposts.component';
 
 
 
@@ -77,7 +78,11 @@ const routes: Routes = [{
   },{
     path:'profile',
     component:ProfileComponent,
-    canActivate:[AuthGaurdService]
+    canActivate:[AuthGaurdService],
+    children:[{
+      path:'',
+      component:MypostsComponent
+    }]
   },{
     path:'article',
     component:ArticleComponent

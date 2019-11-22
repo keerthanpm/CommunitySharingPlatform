@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YourfeedService } from '../../../service/yourfeed.service';
+import { Router } from '@angular/router';
+import { PostService } from 'src/app/post.service';
 @Component({
   selector: 'app-yourfeed',
   templateUrl: './yourfeed.component.html',
@@ -7,8 +9,18 @@ import { YourfeedService } from '../../../service/yourfeed.service';
 })
 export class YourfeedComponent implements OnInit {
   posts = [];
+  route(id){
+    console.log("Post id"+id)
+    if(sessionStorage.getItem(id)){
+      sessionStorage.removeItem("id");
+    }
+    sessionStorage.setItem("id",id);
+    this.idService.putid(id);
+    console.log(id)
+    this.router.navigate(['/dashboard/article']);
+  }
   
-  constructor(private yourfeedservice: YourfeedService) { }
+  constructor(private yourfeedservice: YourfeedService,private router:Router,private idService:PostService) { }
 
   
   ngOnInit() {

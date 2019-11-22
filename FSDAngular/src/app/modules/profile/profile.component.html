@@ -1,1 +1,25 @@
-<p>profile works!</p>
+<div class="jumbotron ">
+    <div class="profile">
+        <div class="article-meta">
+
+            <img src="assets/images/smiley-cyrus.jpg">
+
+
+            <div class="info">
+                <p id="userName"> Username </p>
+                <p id="bio"> this is bio <br>
+                    <button class="nav-item nav-link-edit" id="button1" [routerLink]="['settings']">Update your profile</button>
+                
+            </div>
+        </div>
+</div>
+</div>
+
+<div class="feed">
+  
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+

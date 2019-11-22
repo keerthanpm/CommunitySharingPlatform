@@ -1,0 +1,29 @@
+<div class="article-preview" *ngFor="let post of posts">
+    <div class="article-meta">
+        <a href="Username">
+            <img src="assets/images/smiley-cyrus.jpg">
+        </a>
+
+        <div class="info">
+            <a class="author" href="/profile/Username"> {{post.username}}</a>
+            <span class="date"> November 2, 2019 </span>
+        </div>
+
+        <div id="app-favorite-button" class="pull-xs-right">
+
+            <!-- <button type="button" class="btn btn-default btn-sm" id="like">
+                <span class="glyphicon glyphicon-thumbs-up"></span> Like
+            </button>
+ -->
+        </div>
+        <div>
+            <a (click)="route(post._id)"><h3>{{post.title}}</h3></a>
+        </div>
+        <div>
+            <h6>
+                {{post.post}}
+            </h6>
+        </div>
+        <hr>
+</div>
+</div>
