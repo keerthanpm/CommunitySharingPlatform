@@ -19,14 +19,22 @@ import { NewArticleComponent } from './modules/new-article/new-article.component
 import { SettingsComponent } from './modules/settings/settings.component';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-htpp-interceptor.service';
 import { ArticleComponent } from './modules/article/article.component';
+<<<<<<< HEAD
 import { MypostsComponent } from './myposts/myposts.component';
+=======
+import { UpdateArticleComponent } from './modules/update-article/update-article.component';
+>>>>>>> e9454b90e1c31b8449754897600b8aa63d421aea
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
+<<<<<<< HEAD
     MypostsComponent
+=======
+    UpdateArticleComponent
+>>>>>>> e9454b90e1c31b8449754897600b8aa63d421aea
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.config.JwtTokenUtil;
+import com.example.demo.model.DAOUser;
 import com.example.demo.model.JwtRequest;
 import com.example.demo.model.JwtResponse;
 import com.example.demo.model.UserDTO;
@@ -51,6 +52,11 @@ public class JwtAuthenticationController {
 		
 	}
 	
+	@RequestMapping(value = "/{username}", method = RequestMethod.GET)
+	public DAOUser getUser(@PathVariable("username") String username ) {
+		return userDetailsService.find(username);
+	}
+	
 	@RequestMapping(value = "/usercheck/{username}", method = RequestMethod.GET)
 	public UserExist check(@PathVariable("username") String username) {
 		UserDetails userDetails= userDetailsService.loadUserByUsername(username);
@@ -62,6 +68,14 @@ public class JwtAuthenticationController {
 		return userExist;
 		
 	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public void updateUser(@RequestBody DAOUser user) throws Exception {
+		userDetailsService.update(user);
+		
+	}
+	
+	
 
 	private void authenticate(String username, String password) throws Exception {
 		// TODO Auto-generated method stub
