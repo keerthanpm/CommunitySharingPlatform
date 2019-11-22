@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from 'selenium-webdriver/http';
+import { SettingService } from 'src/app/service/setting.service';
+import { User2 } from 'src/app/service/signup.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  user:User2=new User2("","","","","");
+  constructor(private settingService:SettingService) { }
 
   ngOnInit() {
+    this.getuserdata();
+  }
+
+  getuserdata(){
+    this.settingService.getuserdata(sessionStorage.getItem('username')).subscribe(response=>{
+      this.user=response;
+      
+    })
+  
   }
 
 }
