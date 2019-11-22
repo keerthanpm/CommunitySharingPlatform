@@ -15,6 +15,7 @@ import { ProfileComponent } from './modules/profile/profile.component';
 import { AuthGaurdService } from './service/auth-gaurd.service';
 import { SearchComponent } from './shared/components/search/search.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
+import { EditArticleComponent } from './modules/edit-article/edit-article.component';
 
 
 
@@ -90,6 +91,9 @@ const routes: Routes = [{
 },{
   path:'search',
   component:SearchComponent
+},{
+  path:'editarticle',
+  component:EditArticleComponent
 }]
 }]
  

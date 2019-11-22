@@ -10,12 +10,12 @@
         </div>
 
         <div id="app-favorite-button" class="pull-xs-right">
-                <a href="https://google.com" id="edit-icon">
+                <a (click)="editarticle(post._id)" id="edit-icon">
                         <span class="glyphicon glyphicon-pencil"></span>
                       </a>
                       &nbsp;
 
-            <button type="button" class="close" aria-label="Close">
+            <button type="button" (click)="deletearticle(post._id)" class="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
 

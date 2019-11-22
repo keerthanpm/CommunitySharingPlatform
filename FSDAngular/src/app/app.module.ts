@@ -20,13 +20,15 @@ import { SettingsComponent } from './modules/settings/settings.component';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-htpp-interceptor.service';
 import { ArticleComponent } from './modules/article/article.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
+import { EditArticleComponent } from './modules/edit-article/edit-article.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
-    MypostsComponent
+    MypostsComponent,
+    EditArticleComponent
   ],
   imports: [
     BrowserModule,
