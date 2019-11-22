@@ -68,6 +68,14 @@ public class JwtAuthenticationController {
 		return userExist;
 		
 	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public void updateUser(@RequestBody DAOUser user) throws Exception {
+		userDetailsService.update(user);
+		
+	}
+	
+	
 
 	private void authenticate(String username, String password) throws Exception {
 		// TODO Auto-generated method stub

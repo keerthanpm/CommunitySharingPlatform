@@ -19,4 +19,9 @@ export class SettingService implements OnInit {
     return this.httpClient.get<User2>('http://localhost:8888/user/'+username)
   }
 
+  updateuserdata(user){
+    return this.httpClient.post('http://localhost:8888/user/update',user)
+
+  }
+
 }

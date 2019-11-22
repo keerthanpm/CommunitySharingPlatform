@@ -38,19 +38,24 @@ ngOnInit() {
     this.getuserdata();
 }
 
-// onsettings(post){
-//   this.isSubmitting=true;
-//   let formObj = this.settingsForm.getRawValue(); 
+onsettings(post){
+  this.isSubmitting=true;
+  let formObj = this.settingsForm.getRawValue(); 
   
   
-//  console.log(this.settingsForm.value)
-//   // this.data.changeMessage(this.settingsForm.value.userName1);
-//   alert('Update succesful');
+ this.user.url=this.settingsForm.value.url
+ this.user.bio=this.settingsForm.value.bio
+//  console.log("After")
+//  console.log(this.user)
+ this.settingService.updateuserdata(this.user).subscribe();
+  // this.data.changeMessage(this.settingsForm.value.userName1);
+  alert('Update succesful');
   
-// }
+}
 getuserdata(){
   this.settingService.getuserdata(sessionStorage.getItem('username')).subscribe(response=>{
     this.user=response;
+    console.log("Before")
     console.log(response)
   })
 
