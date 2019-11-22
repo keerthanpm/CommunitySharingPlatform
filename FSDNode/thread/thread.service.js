@@ -14,13 +14,13 @@ module.exports = {
     myPosts
 };
 
-async function createThread (title, post,id ) {
+async function createThread (title, post,id,tags ) {
     const thread = new Thread({
         title: title,
         post: post,
         username: id,
-        date: Date.now()
-        
+        date: Date.now(),
+        tags:tags
            
         
     });
@@ -106,11 +106,11 @@ async function deleteThread(threadId){
     })
 }
 
-async function updateThread(threadId,newpost,newtitle){
+async function updateThread(threadId,newpost,newtitle, tags){
    
    console.log(threadId);
    console.log(newpost);
-    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost}}).then(success => {
+    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost, tags: tags}}).then(success => {
         res.sendStatus(200);
      }).catch(error=>{
          res.send(500)
