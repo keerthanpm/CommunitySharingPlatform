@@ -32,7 +32,7 @@ a{
 
 p{
     text-align: center;
-    color: #5cb85c;
+    color: red;
 }
 
 #button1{
@@ -44,4 +44,10 @@ p{
 input{
     height: 55px;
     width: 100%;
+}
+
+h5{
+    padding-left:35%;
+    padding-top:8%;
+    
 }

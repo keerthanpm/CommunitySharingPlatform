@@ -2,9 +2,9 @@
   <main>
     <h1>Sign in</h1>
 
-    <a href="#" id="new_account">
-      <p> Need an account?</p>
-    </a>
+    
+      <p> {{errorstring}}</p>
+    
 
     <div>
       <form [formGroup]="loginForm" (ngSubmit)="onlogin(loginForm.value)">
@@ -39,6 +39,9 @@
 
         <button class="btn btn-lg btn btn-success" [disabled]="!loginForm.valid" id="button1" (click)="login()" >Sign In</button>
       </form>
+      
     </div>
+   
   </main>
+ 
 </div>

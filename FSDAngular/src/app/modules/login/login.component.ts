@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
+errorstring=""
 loginForm:FormGroup;
 userName1:string="";
 password:string="";
@@ -33,6 +33,8 @@ user:User1=new User1("","")
     login(){
       this.loginService.authenticate(this.user.username,this.user.password).subscribe(response=>{
         this.router.navigate(['/dashboard']);
+      },error=>{
+        this.errorstring="Invalid Credentials! Please try again"
       })
       
     }
