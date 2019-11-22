@@ -10,6 +10,7 @@ main{
 #button1{
     
     float: right;
+    margin-bottom:10%;
 }
 
 #button2{
@@ -40,4 +41,7 @@ main{
     height: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
+}
+p{
+    color:red;
 }

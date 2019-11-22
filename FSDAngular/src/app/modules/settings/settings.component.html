@@ -2,6 +2,7 @@
     <main>
         <div>
             <h1>Settings</h1>
+            <p>{{errorstring}}</p>
         </div>
         <div>
             <form [formGroup]="settingsForm" (ngSubmit)="onsettings(settingsForm.value)">
@@ -16,7 +17,7 @@
                         <input
                             [class.is-invalid]="settingsForm.get('username').invalid && settingsForm.get('username').touched"
                             formControlName="username" type="text" [(ngModel)]="user.username" class="form-control form-control-lg"
-                            placeholder="User Name" id="username">
+                            placeholder="User Name" id="username" disabled>
                         <div id="label1"
                             *ngIf="settingsForm.get('username').invalid && settingsForm.get('username').touched">
                             <small *ngIf="settingsForm.get('username').errors?.minlength" class="text-danger">Minimum 3
@@ -40,7 +41,7 @@
  
                 <div class="form-group">
                     <input [class.is-invalid]="settingsForm.get('email').invalid && settingsForm.get('email').touched"
-                        formControlName="email" id="email" type="email" [(ngModel)]="user.email" class="form-control form-control-lg" placeholder="Email">
+                        formControlName="email" id="email" type="email" [(ngModel)]="user.email" class="form-control form-control-lg" placeholder="Email" disabled>
                     <div id="label1" *ngIf="settingsForm.get('email').invalid && settingsForm.get('email').touched">
                         <small *ngIf="settingsForm.get('email').errors?.required" class="text-danger">Email is
                             required</small>
@@ -74,8 +75,7 @@
 
         
 
-        <button class="btn btn-lg btn btn-success" type="submit" [disabled]="!settingsForm.valid" id="button2" routerLink="/"> <p>or click
-            here to logout</p></button>
+       
 
     </main>
 </div>
