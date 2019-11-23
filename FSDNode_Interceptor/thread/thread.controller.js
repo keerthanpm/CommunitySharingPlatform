@@ -174,6 +174,7 @@ function myPosts(req,res){
 }
 }
 function updateThread(req, res, next) {    
+    // console.log(req.body.threadId)
    
     if(req.body.threadId && req.body.post && req.body.title && req.body.tags) {
         request.post(

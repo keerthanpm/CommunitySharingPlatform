@@ -47,10 +47,12 @@ isSubmitting=false;
   }
 
   updatearticle(article){
+    console.log("Inside Update Article")
+    console.log(article)
     this.getArticleService.updatearticle(article).subscribe(response=>{
-      alert("Updated Successfully..!")
-      this.router.navigate(['/dashboard/profile'])
     })
+    alert("Updated Successfully..!")
+    this.router.navigate(['/dashboard/profile'])
 
   }
 

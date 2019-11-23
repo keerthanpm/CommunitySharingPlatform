@@ -2,7 +2,7 @@
 <div class="article-preview" *ngFor="let post of posts">
         <div class="article-meta">
             <a href="Username">
-                    <img src={{post.url}}>
+                    <img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
             </a>
             
             <div class="info">
