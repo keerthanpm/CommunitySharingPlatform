@@ -40,7 +40,7 @@ isSubmitting=false;
       
       console.log(this.registrationForm.value)
       console.log(this.registrationForm.value.articleTittle)
-      this.newarticle.updateThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle,this.registrationForm.value.tags)
+      this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle,this.registrationForm.value.tags)
       alert('New Article posted successfully');
       this.router.navigate(['/dashboard/globalfeed'])
      
