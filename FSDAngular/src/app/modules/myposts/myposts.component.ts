@@ -31,7 +31,6 @@ export class MypostsComponent implements OnInit {
 
   ngOnInit() {
     this.getdata();
-    
   }
 
   editarticle(id){
@@ -56,8 +55,7 @@ export class MypostsComponent implements OnInit {
   getdata(){
     this.myfeedservice.sendGetRequest().subscribe((data: any[])=>{
       for(let user of data){
-        console.log(user)
-        
+  
         this.username=user.username
         
         this.settingService.getuserdata(this.username).subscribe(response=>{
