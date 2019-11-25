@@ -15,9 +15,10 @@ router.get('/searchByTags',searchByTags);
 
 function createThread(req, res, next) {    
     if(req.body.title && req.body.post&&req.body.userId && req.body.tags) {
-        var commaTags = req.body.tags.replace(/[ ,]+/g, ",");
+        let commaTags = req.body.tags.replace(/[ ,]+/g, ",");
         commaTags = ','+commaTags+',';
-        threadService.createThread(req.body.title, req.body.post,req.body.userId,commaTags)
+        let imageUrl = req.body.image.replace(/[ ,]+/g, ",");
+        threadService.createThread(req.body.title, req.body.post,req.body.userId,commaTags,imageUrl)
         .then((threadId) => {res.json({threadId});
         })
         .catch(err => next(err))
