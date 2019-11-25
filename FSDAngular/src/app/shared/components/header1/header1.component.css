@@ -269,15 +269,16 @@
 
 .nav >li >a{
   display: block;
-  padding:9.5px;
+  padding:7.588px;
+  
 }
 
 img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 0px;
-  height: 18px;
-  width: 18px;
+  display: inline-flex;
+  
+  
+  height: 25px;
+  width: 25px;
   border-radius: 100px;
 }
   
