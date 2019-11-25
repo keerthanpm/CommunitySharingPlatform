@@ -11,7 +11,7 @@ router.get('/yourfeed',yourfeed);
 router.get('/deleteThread', deleteThread)
 router.post('/updateThread', updateThread)
 router.get('/myPosts', myPosts)
-
+router.get('/searchByTags',searchByTags);
 
 function createThread(req, res, next) {    
     if(req.body.title && req.body.post&&req.body.userId && req.body.tags) {
@@ -113,6 +113,15 @@ function myPosts(req,res){
     res.sendStatus(400);
 }}
 
+function search(req,res){
+    if(req.query.searchTerm){
+        let search = req.query.searchTerm;
+        threadService.searchByTags(search).then(thread => { res.json(thread)})
+        .catch(err => next(err))
 
+}else{
+    res.sendStatus(400);
+}
+}
 
 module.exports = router;
