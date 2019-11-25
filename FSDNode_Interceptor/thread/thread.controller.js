@@ -202,7 +202,7 @@ function updateThread(req, res, next) {
 function searchByTags(req,res){
     if(req.query.searchTerm){
         let url = 'http://localhost:5000/thread/searchByTags'
-    
+        
        
         var propertiesObject = { searchTerm: req.query.searchTerm };
 

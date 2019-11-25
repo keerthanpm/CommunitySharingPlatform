@@ -15,7 +15,9 @@ router.get('/searchByTags',searchByTags);
 
 function createThread(req, res, next) {    
     if(req.body.title && req.body.post&&req.body.userId && req.body.tags) {
-        threadService.createThread(req.body.title, req.body.post,req.body.userId,req.body.tags)
+        var commaTags = req.body.tags.replace(/[ ,]+/g, ",");
+        commaTags = ','+commaTags+',';
+        threadService.createThread(req.body.title, req.body.post,req.body.userId,commaTags)
         .then((threadId) => {res.json({threadId});
         })
         .catch(err => next(err))
@@ -113,7 +115,7 @@ function myPosts(req,res){
     res.sendStatus(400);
 }}
 
-function search(req,res){
+function searchByTags(req,res){
     if(req.query.searchTerm){
         let search = req.query.searchTerm;
         threadService.searchByTags(search).then(thread => { res.json(thread)})

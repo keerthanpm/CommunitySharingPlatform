@@ -130,7 +130,7 @@ async function myPosts (id){
 
 
 async function searchByTags (searchTerm){
-    return await Thread.find({ "tags": { $regex: '.*' + searchTerm + '.*' } }).then(
+    return await Thread.find({ "tags": { $regex: '.*' +','+ searchTerm + ',' + '.*' } }).then(
         thread => {
             return thread;
         }).catch(error => {
