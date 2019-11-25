@@ -32,13 +32,13 @@ export class GetarticleService {
   }
 
   updatearticle(article){
-    return this.httpClient.post('http://localhost:4000/thread/updateThread',{
-      params:{
-        threadId:article._id,
-        post:article.post,
-        title:article.title
-      }
-    })
+    let body = {
+      threadId: article._id,
+      title:article.title,
+      post: article.post,
+      tags: article.tags
+    }
+    return this.httpClient.post('http://localhost:4000/thread/updateThread',body)
   }
 
   deletearticle(id){
