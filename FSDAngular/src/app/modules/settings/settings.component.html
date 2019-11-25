@@ -56,7 +56,7 @@
                     <input
                         [class.is-invalid]="settingsForm.get('password').invalid && settingsForm.get('password').touched"
                         formControlName="password" type="password" id="password" class="form-control form-control-lg"
-                        placeholder="Password">
+                        placeholder="Confirm Password">
                     <div id="label1"
                         *ngIf="settingsForm.get('password').invalid && settingsForm.get('password').touched">
                         <small *ngIf="settingsForm.get('password').errors?.required" class="text-danger">Password is
