@@ -11,7 +11,8 @@ module.exports = {
     yourfeed,
     deleteThread,
     updateThread,
-    myPosts
+    myPosts,
+    searchByTags
 };
 
 async function createThread (title, post,id,tags ) {
@@ -128,3 +129,12 @@ async function myPosts (id){
 }
 
 
+async function searchByTags (searchTerm){
+    return await Thread.find({ "tags": { $regex: '.*' +','+ searchTerm + ',' + '.*' } }).then(
+        thread => {
+            return thread;
+        }).catch(error => {
+            return error;            
+        });
+    
+}

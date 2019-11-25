@@ -12,7 +12,7 @@ router.get('/yourfeed',yourfeed);
 router.get('/deleteThread',deleteThread);
 router.get('/myPosts',myPosts);
 router.post('/updateThread', updateThread);
-
+router.get('/searchByTags',searchByTags);
 
 function createThread(req, res, next) {    
    
@@ -199,4 +199,21 @@ function updateThread(req, res, next) {
     }
 }
 
+function searchByTags(req,res){
+    if(req.query.searchTerm){
+        let url = 'http://localhost:5000/thread/searchByTags'
+        
+       
+        var propertiesObject = { searchTerm: req.query.searchTerm };
+
+        request({url:url, qs:propertiesObject}, function(err, response, body) {
+          if(err) { res.send(err); return; }
+          let json = JSON.parse(body);
+          res.json(json);
+        });
+
+}else{
+    res.sendStatus(400);
+}
+}
 module.exports = router;
