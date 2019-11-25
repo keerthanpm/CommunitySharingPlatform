@@ -97,7 +97,7 @@
   }
   
   .header-blue .navbar.navbar .navbar-nav > li > a{
-    padding-left:18px;
+    padding-left:14px;
     padding-right:18px;
   }
   
@@ -266,5 +266,18 @@
     transform:rotate(-19deg);
     opacity:0.2;
   }
-  
+
+.nav >li >a{
+  display: block;
+  padding:9.5px;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0px;
+  height: 18px;
+  width: 18px;
+  border-radius: 100px;
+}
   
