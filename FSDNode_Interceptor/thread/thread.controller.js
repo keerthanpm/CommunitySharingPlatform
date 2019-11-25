@@ -22,7 +22,8 @@ function createThread(req, res, next) {
             { json: { title: req.body.title,
                 post: req.body.post,
                 userId: req.body.userId,
-                tags: req.body.tags
+                tags: req.body.tags,
+                image: req.body.image
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {

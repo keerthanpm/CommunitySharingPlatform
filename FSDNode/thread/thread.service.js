@@ -15,14 +15,14 @@ module.exports = {
     searchByTags
 };
 
-async function createThread (title, post,id,tags ) {
+async function createThread (title, post,id,tags,image ) {
     const thread = new Thread({
         title: title,
         post: post,
         username: id,
         date: Date.now(),
-        tags:tags
-           
+        tags:tags,
+        image_url: image
         
     });
     return await thread.save().then(res => {
