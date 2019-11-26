@@ -12,8 +12,9 @@
                     <form class="navbar-form navbar-left" target="_self">
                         <div class="form-group">
                             <label class="control-label" for="search-field"><i class="glyphicon glyphicon-search"
-                                    (click)="search(searchterm)"></i></label>
+                                    ></i></label>
                             <input class="form-control search-field" [(ngModel)]="searchterm" type="search"
+                            (click)="search(searchterm)"
                                 name="search" id="search-field">
                         </div>
                     </form>

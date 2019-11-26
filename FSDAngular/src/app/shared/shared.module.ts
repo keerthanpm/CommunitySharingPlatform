@@ -12,6 +12,7 @@ import { Header1Component } from './components/header1/header1.component';
 import { SearchComponent } from './components/search/search.component';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     GlobalfeedComponent,
     YourfeedComponent,
     Header1Component,
-    SearchComponent
+    SearchComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule,
