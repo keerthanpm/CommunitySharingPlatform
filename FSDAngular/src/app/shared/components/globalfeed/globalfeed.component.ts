@@ -60,6 +60,7 @@ getdata(){
       this.settingService.getuserdata(this.username).subscribe(response=>{
           user['url']=response.url
     })}
+    //console.log(data)
     this.posts = data;      
   }) 
 }

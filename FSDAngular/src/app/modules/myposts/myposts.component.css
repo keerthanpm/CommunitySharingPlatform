@@ -72,3 +72,9 @@ h6{
 #edit-icon:hover{
     color:black;
 }
+#attachment img{
+
+    width:120px;
+    height:120px; 
+
+}

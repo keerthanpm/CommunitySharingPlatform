@@ -25,7 +25,7 @@ isSubmitting=false;
   }
   constructor(private fb: FormBuilder, private newarticle: NewarticleService,private router:Router ){
     this.registrationForm = fb.group({
-      'articleAbout':['',[Validators.required, Validators.minLength(3)]],
+      'image':[''],
       'articleTittle':['',[Validators.required]],
       'yourArticle':['',[Validators.required, Validators.minLength(8)]],
       'tags':['',Validators.required],
@@ -40,7 +40,7 @@ isSubmitting=false;
       
       console.log(this.registrationForm.value)
       console.log(this.registrationForm.value.articleTittle)
-      this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle,this.registrationForm.value.tags)
+      this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle,this.registrationForm.value.tags,this.registrationForm.value.image)
       alert('New Article posted successfully');
       this.router.navigate(['/dashboard/globalfeed'])
      

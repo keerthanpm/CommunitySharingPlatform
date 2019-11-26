@@ -31,7 +31,7 @@ isSubmitting=false;
  
   constructor(private fb: FormBuilder,private router:Router,private getArticleService:GetarticleService ){
     this.registrationForm = fb.group({
-      'articleAbout':['',[Validators.required, Validators.minLength(3)]],
+      'image':[''],
       'articleTittle':['',[Validators.required]],
       'yourArticle':['',[Validators.required, Validators.minLength(8)]],
       'tags':['',Validators.required],

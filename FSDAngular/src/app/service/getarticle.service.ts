@@ -36,7 +36,8 @@ export class GetarticleService {
       threadId: article._id,
       title:article.title,
       post: article.post,
-      tags: article.tags
+      tags: article.tags,
+      image: article.image
     }
     return this.httpClient.post('http://localhost:4000/thread/updateThread',body)
   }
