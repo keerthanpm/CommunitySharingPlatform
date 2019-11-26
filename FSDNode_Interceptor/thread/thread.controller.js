@@ -18,7 +18,7 @@ function createThread(req, res, next) {
    
     if(req.body.title && req.body.post&&req.body.userId&&req.body.tags) {
         request.post(
-            'http://localhost:5000/thread/create',
+            'http://localhost:2222/thread/create',
             { json: { title: req.body.title,
                 post: req.body.post,
                 userId: req.body.userId,
