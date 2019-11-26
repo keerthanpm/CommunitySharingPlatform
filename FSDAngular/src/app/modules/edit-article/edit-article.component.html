@@ -12,16 +12,7 @@
         </div>
       </div>
         
-      <div class="form-group">
-        <input 
-        id="art2" [class.is-invalid]="registrationForm.get('articleAbout').invalid && registrationForm.get('articleAbout').touched"
-          formControlName="articleAbout" type="text" class="form-control" placeholder="what's this article about?" >
-        <div id="label1" *ngIf="registrationForm.get('articleAbout').invalid && registrationForm.get('articleAbout').touched">
-          <small *ngIf="registrationForm.get('articleAbout').errors?.required" class="text-danger">article about is required</small>
-          <small *ngIf="registrationForm.get('articleAbout').errors?.minlength" class="text-danger">Minimum 3 character
-            required</small>
-        </div>
-      </div>
+      
      
       <div class="form-group">
         <textarea id="your1"  [class.is-invalid]="registrationForm.get('yourArticle').invalid && registrationForm.get('yourArticle').touched"
@@ -31,6 +22,17 @@
           <small *ngIf="registrationForm.get('yourArticle').errors?.minlength" class="text-danger">Minimum 3 character
             required</small>
         </div>
+      </div>
+      
+      <div class="form-group">
+        <input 
+        id="art2" [class.is-invalid]="registrationForm.get('image').invalid && registrationForm.get('image').touched"
+          formControlName="image" type="text" [(ngModel)]="article.image" class="form-control" placeholder="Attachment URL" value="" >
+        <!-- <div id="label1" *ngIf="registrationForm.get('articleAbout').invalid && registrationForm.get('articleAbout').touched">
+          <small *ngIf="registrationForm.get('articleAbout').errors?.required" class="text-danger">article about is required</small>
+          <small *ngIf="registrationForm.get('articleAbout').errors?.minlength" class="text-danger">Minimum 3 character
+            required</small>
+        </div> -->
       </div>
       <div class="form-group">
         <input id="art3"

@@ -114,4 +114,11 @@ h6{
     border-bottom:1px dashed #efefef;
     margin-bottom:25px;
 }
-     
+    
+#attachment img{
+
+    width:120px;
+    height:120px; 
+    
+
+}
