@@ -1,7 +1,7 @@
 <div class="article-preview" *ngFor="let search of searcharr|keyvalue">
     <div class="article-meta">
         <a href="Username">
-                <img src="assets/images/smiley-cyrus.jpg">
+                <img src={{search.value.url}}>
         </a>
         
         <div class="info">
@@ -11,10 +11,10 @@
         </div>
         <div id="app-favorite-button" class="pull-xs-right">
                 
-                        <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
+                        <!-- <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
                           <span class="glyphicon glyphicon-thumbs-up"></span> Like 
                         </button>
-                      
+                       -->
             </div>
             <div>
                 <h3>{{search.value.title}}</h3>
@@ -24,6 +24,10 @@
                     {{search.value.post}}
                 </h6>
             </div>
+            <span id="attachment" >
+                <img src={{search.value.image_url}} class="img-responsive" >
+                
+            </span> 
             <hr>
 </div>    
    
