@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div *ngIf="searcharr.length==0; else elseBlock">
     <div id="img2">
     <img id="img1" src="../../../../assets/images/images (1) (1).png">
@@ -43,40 +42,3 @@
     </ng-template>
     
     
-=======
-<div class="article-preview" *ngFor="let search of searcharr|keyvalue">
-    <div class="article-meta">
-        <a href="Username">
-                <img src={{search.value.url}}>
-        </a>
-        
-        <div class="info">
-            <a class="author" href="/profile/username"> {{search.value.username}} </a>
-            <span class="date"> November 2, 2019 </span>
-
-        </div>
-        <div id="app-favorite-button" class="pull-xs-right">
-                
-                        <!-- <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
-                          <span class="glyphicon glyphicon-thumbs-up"></span> Like 
-                        </button>
-                       -->
-            </div>
-            <div>
-                <h3>{{search.value.title}}</h3>
-            </div>
-            <div>
-                <h6>
-                    {{search.value.post}}
-                </h6>
-            </div>
-            <span id="attachment" >
-                <img src={{search.value.image_url}} class="img-responsive" >
-                
-            </span> 
-            <hr>
-</div>    
-   
- </div>
-
->>>>>>> 6ba6d7114b88d411cfd8dd24b867df9dc24ee131
