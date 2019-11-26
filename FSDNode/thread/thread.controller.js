@@ -99,8 +99,8 @@ function deleteThread(req,res){
 }
 function updateThread(req,res){
     if(req.body.threadId&&req.body.post&&req.body.title&&req.body.tags){
-       
-        threadService.updateThread(req.body.threadId,req.body.post,req.body.title,req.body.tags).then(thread=>{res.send(200)}).catch(err=>res.send(err))
+        let imageUrl = req.body.image.replace(/[ ,]+/g, ",");
+        threadService.updateThread(req.body.threadId,req.body.post,req.body.title,req.body.tags,imageUrl).then(thread=>{res.send(200)}).catch(err=>res.send(err))
     }
     else{
             res.send(400);

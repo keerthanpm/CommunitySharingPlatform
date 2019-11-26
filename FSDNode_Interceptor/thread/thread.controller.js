@@ -184,7 +184,8 @@ function updateThread(req, res, next) {
                 post: req.body.post,
                 userId: req.body.userId,
                 title: req.body.title,
-                tags: req.body.tags
+                tags: req.body.tags,
+                image: req.body.image
              } },
             function (error, response, body) {
                 if (!error && response.statusCode == 200) {
