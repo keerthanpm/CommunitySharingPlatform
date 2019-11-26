@@ -6,6 +6,7 @@ import {UsernameServiceService} from '../../username-service.service';
 import { stringify } from '@angular/compiler/src/util';
 import { Router } from '@angular/router';
 import { SignupService, User } from 'src/app/service/signup.service';
+import { MailService } from 'src/app/service/mail.service';
 
 @Component({
   selector: 'app-signup',
@@ -26,7 +27,7 @@ isSubmitting=false;
   get userName(){
     return this.registrationForm.get('userName1');
   }
-  constructor(private fb: FormBuilder,private router: Router,private signupService:SignupService ){
+  constructor(private fb: FormBuilder,private router: Router,private signupService:SignupService,private mailService:MailService ){
     this.registrationForm = fb.group({
       'email':['',[Validators.required, Validators.email]],
       'userName1':['',[Validators.required, Validators.minLength(3),forbiddenNameValidator(/password/)]],
@@ -38,6 +39,7 @@ isSubmitting=false;
   register(user){
     this.signupService.register(user).subscribe(response=>{
       alert("Sign Up Successfull");
+      this.mailService.sendmail(user.email).subscribe();
       this.router.navigate(['login']);
     })
 
