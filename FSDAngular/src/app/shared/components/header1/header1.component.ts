@@ -33,7 +33,9 @@ export class Header1Component implements OnInit {
       
       this.searchService.setResult(response)
       
+      
       this.router.navigate(['dashboard/search']);
+
     })
 
   }
