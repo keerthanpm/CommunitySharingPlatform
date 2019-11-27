@@ -1,3 +1,4 @@
+import { TextareaService } from './../../service/textarea.service';
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from '@angular/forms';
 
@@ -8,8 +9,8 @@ import {NgForm} from '@angular/forms';
 })
 export class TextareaComponent implements OnInit {
 
-  value:string="type......."
-  constructor() { }
+  value:string=" hello"
+  constructor(private textareaService:TextareaService) { }
   public tools: object = {
     items: [
            'Bold', 'Italic', 'Underline', 'StrikeThrough', '|',
@@ -27,6 +28,11 @@ export class TextareaComponent implements OnInit {
   print(value){
     
     console.log(this.value)
+  }
+
+  onKey($event,text){
+    this.value=text
+    this.textareaService.getdata(this.value);
   }
 
 }
