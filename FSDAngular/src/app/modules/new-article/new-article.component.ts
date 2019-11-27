@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FormBuilder,Validators, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import {NewarticleService} from '../../newarticle.service'
+import { NewarticleService } from '../../newarticle.service'
 
 
 @Component({
@@ -11,44 +11,49 @@ import {NewarticleService} from '../../newarticle.service'
   styleUrls: ['./new-article.component.css']
 })
 export class NewArticleComponent implements OnInit {
-  ngOnInit(){
-   
+  ngOnInit() {
+
   }
 
-  registrationForm:FormGroup;
-articleTittle:string="";
-articleAbout:string="";
-yourArticle:string="";
-tags:string="";
-post:any;
-isSubmitting=false;
+  registrationForm: FormGroup;
+  articleTittle: string = "";
+  articleAbout: string = "";
+  yourArticle: string = "";
+  tags: string = "";
+  post: any;
+  image: [];
+  isSubmitting = false;
 
 
-  get userName(){
+  get userName() {
     return this.registrationForm.get('articleTittle');
   }
-  constructor(private fb: FormBuilder, private newarticle: NewarticleService,private router:Router ){
+  constructor(private fb: FormBuilder, private newarticle: NewarticleService, private router: Router) {
     this.registrationForm = fb.group({
-      'image':[''],
-      'articleTittle':['',[Validators.required]],
-      'yourArticle':['',[Validators.required, Validators.minLength(8)]],
-      'tags':['',Validators.required],
+      'image': [''],
+      'articleTittle': ['', [Validators.required]],
+      'yourArticle': [''],
+      'tags': ['', Validators.required],
     });
+
+
+
   }
-   
+
   
-    onRegister(post){
-      this.isSubmitting=true;
-      let formObj = this.registrationForm.getRawValue(); 
-     
-      
-      console.log(this.registrationForm.value)
-      console.log(this.registrationForm.value.articleTittle)
-      this.newarticle.postThread(this.registrationForm.value.articleTittle,this.registrationForm.value.yourArticle,this.registrationForm.value.tags,this.registrationForm.value.image)
-      alert('New Article posted successfully');
-      this.router.navigate(['/dashboard/globalfeed'])
-     
-    }
-  
+  onRegister(post) {
+    this.isSubmitting = true;
+    let formObj = this.registrationForm.getRawValue();
+
+
+    
+    console.log(this.registrationForm.value)
+    console.log(this.registrationForm.value.articleTittle)
+    this.newarticle.postThread(this.registrationForm.value.articleTittle, this.registrationForm.value.yourArticle, this.registrationForm.value.tags, this.registrationForm.value.image)
+    alert('New Article posted successfully');
+    this.router.navigate(['/dashboard/globalfeed'])
+
+  }
+
 
 }

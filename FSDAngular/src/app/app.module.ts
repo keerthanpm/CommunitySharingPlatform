@@ -14,12 +14,14 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 
 
 import { Layout1Module } from './layout/layout1/layout1.module';
+import { RichTextEditorAllModule } from '@syncfusion/ej2-angular-richtexteditor';
 
 import { SettingsComponent } from './modules/settings/settings.component';
 import { BasicAuthHtppInterceptorService } from './service/basic-auth-htpp-interceptor.service';
 import { ArticleComponent } from './modules/article/article.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
 import { EditArticleComponent } from './modules/edit-article/edit-article.component';
+import { TextareaComponent } from './modules/textarea/textarea.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { EditArticleComponent } from './modules/edit-article/edit-article.compon
     AppComponent,
     ArticleComponent,
     MypostsComponent,
-    EditArticleComponent
+    EditArticleComponent,
+    TextareaComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { EditArticleComponent } from './modules/edit-article/edit-article.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    Layout1Module
+    Layout1Module,
+    RichTextEditorAllModule
     
 
   ],
