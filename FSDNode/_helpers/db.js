@@ -1,6 +1,6 @@
 const config = require('config.json');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/course-information', { useCreateIndex: true, useNewUrlParser: true }).then(()=>{
+mongoose.connect('mongodb://user:Test123#@ds259865.mlab.com:59865/project-test', { useCreateIndex: true, useNewUrlParser: true }).then(()=>{
 console.log('db connected');
 
 }).catch(()=>{
