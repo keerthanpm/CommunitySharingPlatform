@@ -16,6 +16,7 @@ import { AuthGaurdService } from './service/auth-gaurd.service';
 import { SearchComponent } from './shared/components/search/search.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
 import { EditArticleComponent } from './modules/edit-article/edit-article.component';
+import { TextareaComponent } from './modules/textarea/textarea.component';
 
 
 
@@ -71,7 +72,13 @@ const routes: Routes = [{
   },{
     path:'newarticle',
     component:NewArticleComponent,
-    canActivate:[AuthGaurdService]
+    canActivate:[AuthGaurdService],
+    children:[{
+      path:'',
+      component: TextareaComponent,
+      canActivate:[AuthGaurdService]
+
+    }]
   },{
     path:'settings',
     component:SettingsComponent,
