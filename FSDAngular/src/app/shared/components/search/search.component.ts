@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from 'src/app/service/search.service';
 import { SettingService } from 'src/app/service/setting.service';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +11,19 @@ import { SettingService } from 'src/app/service/setting.service';
 export class SearchComponent implements OnInit {
   username:string
   searcharr=[];
-  constructor(private searchService:SearchService,private settingService:SettingService) { }
+  constructor(private router:Router,private searchService:SearchService,private settingService:SettingService) { 
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.ngOnInit();
+        this.ngOnInit();
+      }
+      // Instance of should be: 
+      // NavigationEnd
+      // NavigationCancel
+      // NavigationError
+      // RoutesRecognized
+    });
+  }
 
   ngOnInit() {
     this.fetchdata();

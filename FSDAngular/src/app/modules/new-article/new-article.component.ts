@@ -58,7 +58,6 @@ export class NewArticleComponent implements OnInit {
     alert('New Article posted successfully');
     this.router.navigate(['/dashboard/globalfeed'])
 
-  }
 
-
+}
 }

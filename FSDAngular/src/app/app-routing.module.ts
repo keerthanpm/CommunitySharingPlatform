@@ -100,7 +100,13 @@ const routes: Routes = [{
   component:SearchComponent
 },{
   path:'editarticle',
-  component:EditArticleComponent
+  component:EditArticleComponent,
+  children:[{
+    path:'',
+    component: TextareaComponent,
+    canActivate:[AuthGaurdService]
+
+  }]
 }]
 }]
  

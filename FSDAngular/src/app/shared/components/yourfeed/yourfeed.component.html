@@ -20,8 +20,8 @@
                 <a (click)="route(post._id)"><h3>{{post.title}}</h3></a>
             </div>
             <div>
-                <h6>
-                    {{post.post}}
+                <h6 [innerHTML]="post.post">
+                    
                 </h6>
             </div>
             <span id="attachment" style="margin: 0px; display: inline;">
