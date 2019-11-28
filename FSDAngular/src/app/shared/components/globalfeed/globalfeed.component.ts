@@ -49,6 +49,7 @@ export class GlobalfeedComponent implements OnInit {
   
     this.globaldataservice.sendGetRequest().subscribe((data: any[])=>{
     this.posts = data;
+    
     this.ngOnInit();
     this.ngOnInit();
     
@@ -78,7 +79,7 @@ getdata(){
           user['url']=response.url
     })}
     //console.log(data)
-    this.posts = data;      
+    this.posts = data.reverse();      
   }) 
   
 }
