@@ -39,7 +39,7 @@ getdata(){
       this.settingService.getuserdata(this.username).subscribe(response=>{
           user['url']=response.url
     })}
-    this.posts = data;      
+    this.posts = data.reverse();      
   }) 
 }
 }
