@@ -29,7 +29,7 @@ public class RabbitMQConsumerService {
 	public void receiveMessage(Threads t) {
 		restTemplate =new RestTemplate();
 		System.out.println("Received Message from foo-queue Queue >>" + t.getPost());
-		String url = "http://localhost:5000/thread/create";
+		String url = "https://thread-service.herokuapp.com/thread/create";
 
 	    // create headers
 	    HttpHeaders headers = new HttpHeaders();

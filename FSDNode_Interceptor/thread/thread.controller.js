@@ -29,16 +29,18 @@ function createThread(req, res, next) {
                 if (!error && response.statusCode == 200) {
                     res.sendStatus(200);
                 }else{
-                    res.sendStatus(response.statusCode);
+                   
+                        res.sendStatus(500);
+                    }
                 }
-            }
+            
         );
     }}
 
 function createPost(req, res, next) {
     if(req.body.threadId && req.body.post && req.body.userId) {
         request.post(
-            'http://localhost:5000/thread/post',
+            'https://thread-service.herokuapp.com/thread/post',
             { json: { threadId: req.body.threadId,
                 post: req.body.post,
                 userId: req.body.userId
@@ -47,7 +49,9 @@ function createPost(req, res, next) {
                 if (!error && response.statusCode == 200) {
                     res.sendStatus(200)
                 }else{
-                    res.sendStatus(response.statusCode);
+                    
+                            res.sendStatus(500);
+                        
                 }
             }
         );
@@ -58,7 +62,7 @@ function createPost(req, res, next) {
 
 function get (req, res, next) {
     
-    let url = 'http://localhost:5000/thread/get'
+    let url = 'https://thread-service.herokuapp.com/thread/get'
     if(req.query.threadId) {
        
         var propertiesObject = { threadId: req.query.threadId };
@@ -83,7 +87,7 @@ function get (req, res, next) {
 
 function search(req,res){
     if(req.query.searchTerm){
-        let url = 'http://localhost:5000/thread/search'
+        let url = 'https://thread-service.herokuapp.com/thread/search'
     
        
         var propertiesObject = { searchTerm: req.query.searchTerm };
@@ -102,7 +106,7 @@ function like(req,res){
     if(req.body.id&& req.body.threadId ){
         
         request.post(
-            'http://localhost:5000/thread/like',
+            'https://thread-service.herokuapp.com/thread/like',
             { json: { id: req.body.id,
                 threadId: req.body.threadId,
                 
@@ -126,7 +130,7 @@ function like(req,res){
 }
 function yourfeed(req,res){
     if(req.query.userId){
-        let url = 'http://localhost:5000/thread/yourfeed'
+        let url = 'https://thread-service.herokuapp.com/thread/yourfeed'
     
        
         var propertiesObject = { userId: req.query.userId };
@@ -143,7 +147,7 @@ function yourfeed(req,res){
 }
 function deleteThread(req,res){
     if(req.query.threadId){
-        let url = 'http://localhost:5000/thread/deleteThread'
+        let url = 'https://thread-service.herokuapp.com/thread/deleteThread'
     
       // console.log('here in interceptor');
         var propertiesObject = { threadId: req.query.threadId };
@@ -159,7 +163,7 @@ function deleteThread(req,res){
 }
 function myPosts(req,res){
     if(req.query.userId){
-        let url = 'http://localhost:5000/thread/myPosts'
+        let url = 'https://thread-service.herokuapp.com/thread/myPosts'
     
        
         var propertiesObject = { userId: req.query.userId };
@@ -179,7 +183,7 @@ function updateThread(req, res, next) {
    
     if(req.body.threadId && req.body.post && req.body.title && req.body.tags) {
         request.post(
-            'http://localhost:5000/thread/updateThread',
+            'https://thread-service.herokuapp.com/thread/updateThread',
             { json: { threadId: req.body.threadId,
                 post: req.body.post,
                 userId: req.body.userId,
@@ -203,7 +207,7 @@ function updateThread(req, res, next) {
 
 function searchByTags(req,res){
     if(req.query.searchTerm){
-        let url = 'http://localhost:5000/thread/searchByTags'
+        let url = 'https://thread-service.herokuapp.com/thread/searchByTags'
         
        
         var propertiesObject = { searchTerm: req.query.searchTerm };
