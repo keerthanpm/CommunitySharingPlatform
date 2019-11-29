@@ -18,6 +18,7 @@ import { MypostsComponent } from './modules/myposts/myposts.component';
 import { EditArticleComponent } from './modules/edit-article/edit-article.component';
 import { TextareaComponent } from './modules/textarea/textarea.component';
 import { ErrorComponent } from './shared/components/error/error.component';
+import { TagsComponent } from './shared/components/tags/tags.component';
 
 
 
@@ -60,10 +61,15 @@ const routes: Routes = [{
     children:[{
         path:'',
         component:YourfeedComponent
-      },{
+      },
+      {
         path:'globalfeed',
         component:GlobalfeedComponent,
-        canActivate:[AuthGaurdService]
+        canActivate:[AuthGaurdService],
+        children:[{
+          path:'',
+          component:TagsComponent
+        }]
         
       },{
         path:'yourfeed',

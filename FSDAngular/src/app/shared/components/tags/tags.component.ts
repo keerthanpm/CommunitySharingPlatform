@@ -21,7 +21,7 @@ export class TagsComponent implements OnInit {
       
      console.log( this.searchService.setResult(response));
       
-      this.router.navigate(['search']);
+      this.router.navigate(['/dashboard/search']);
   })
 
 }
