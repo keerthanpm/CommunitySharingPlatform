@@ -15,6 +15,7 @@ import { SettingService } from 'src/app/service/setting.service';
 
 export class GlobalfeedComponent implements OnInit {
   user:User2=new User2("","","","","");
+ 
   posts = [];
   username:string;
   likes;

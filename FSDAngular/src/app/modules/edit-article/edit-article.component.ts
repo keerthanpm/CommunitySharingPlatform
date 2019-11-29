@@ -5,6 +5,7 @@ import { FormBuilder,Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { GetarticleService, article } from 'src/app/service/getarticle.service';
+import { TextareaService } from 'src/app/service/textarea.service';
 
 @Component({
   selector: 'app-edit-article',
@@ -29,7 +30,7 @@ isSubmitting=false;
 
 
  
-  constructor(private fb: FormBuilder,private router:Router,private getArticleService:GetarticleService ){
+  constructor(private fb: FormBuilder,private textareaService:TextareaService,private router:Router,private getArticleService:GetarticleService ){
     this.registrationForm = fb.group({
       'image':[''],
       'articleTittle':['',[Validators.required]],
@@ -48,7 +49,8 @@ isSubmitting=false;
 
   updatearticle(article){
     console.log("Inside Update Article")
-    console.log(article)
+    console.log(this.article)
+    this.article.post=this.textareaService.givedata();
     this.getArticleService.updatearticle(article).subscribe(response=>{
     })
     alert("Updated Successfully..!")
