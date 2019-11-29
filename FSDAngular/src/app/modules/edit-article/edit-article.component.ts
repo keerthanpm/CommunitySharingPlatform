@@ -33,7 +33,7 @@ isSubmitting=false;
     this.registrationForm = fb.group({
       'image':[''],
       'articleTittle':['',[Validators.required]],
-      'yourArticle':['',[Validators.required, Validators.minLength(8)]],
+      'yourArticle':[''],
       'tags':['',Validators.required],
     });
   }

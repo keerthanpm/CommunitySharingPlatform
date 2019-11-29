@@ -30,7 +30,7 @@
       <div class="form-group">
         <input 
         id="art2" [class.is-invalid]="registrationForm.get('image').invalid && registrationForm.get('image').touched"
-          formControlName="image" type="text" [(ngModel)]="article.image_url" class="form-control" placeholder="Attachment URL" value="" >
+          formControlName="image" type="text" [(ngModel)]="article.image_url" class="form-control" placeholder="Attachment URL"  >
         <!-- <div id="label1" *ngIf="registrationForm.get('articleAbout').invalid && registrationForm.get('articleAbout').touched">
           <small *ngIf="registrationForm.get('articleAbout').errors?.required" class="text-danger">article about is required</small>
           <small *ngIf="registrationForm.get('articleAbout').errors?.minlength" class="text-danger">Minimum 3 character

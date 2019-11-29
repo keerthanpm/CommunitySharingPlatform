@@ -17,6 +17,7 @@ import { SearchComponent } from './shared/components/search/search.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
 import { EditArticleComponent } from './modules/edit-article/edit-article.component';
 import { TextareaComponent } from './modules/textarea/textarea.component';
+import { ErrorComponent } from './shared/components/error/error.component';
 
 
 
@@ -107,6 +108,9 @@ const routes: Routes = [{
     canActivate:[AuthGaurdService]
 
   }]
+},{
+  path:'error',
+  component:ErrorComponent
 }]
 }]
  

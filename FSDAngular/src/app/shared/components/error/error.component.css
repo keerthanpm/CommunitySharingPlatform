@@ -24,5 +24,10 @@ position: fixed;
     
 }
 #error1{
-padding-top: 20%;
+padding-top: 15%;
+}
+
+#error{
+  color:#5cb85c;
+  text-align: center;
 }

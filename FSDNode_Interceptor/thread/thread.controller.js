@@ -192,9 +192,12 @@ function updateThread(req, res, next) {
                 image: req.body.image
              } },
             function (error, response, body) {
+                
                 if (!error && response.statusCode == 200) {
                     res.sendStatus(200);
+                    
                 }else{
+                    console.log(response);
                     res.sendStatus(response.statusCode);
                 }
             }
