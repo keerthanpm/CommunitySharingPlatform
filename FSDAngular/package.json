@@ -24,6 +24,7 @@
     "@angular/router": "~8.2.11",
     "@ks89/angular-modal-gallery": "^7.2.5",
     "@syncfusion/ej2-angular-richtexteditor": "^17.3.29",
+    "angular": "^1.7.9",
     "hammerjs": "^2.0.8",
     "mousetrap": "^1.6.3",
     "node-emoji": "^1.10.0",
