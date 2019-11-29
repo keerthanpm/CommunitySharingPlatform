@@ -13,6 +13,7 @@ import { SearchComponent } from './components/search/search.component';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorComponent } from './components/error/error.component';
+import { TagsComponent } from './components/tags/tags.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ErrorComponent } from './components/error/error.component';
     YourfeedComponent,
     Header1Component,
     SearchComponent,
-    ErrorComponent
+    ErrorComponent,
+    TagsComponent
   ],
   imports: [
     CommonModule,
