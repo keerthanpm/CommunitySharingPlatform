@@ -74,7 +74,11 @@ const routes: Routes = [{
       },{
         path:'yourfeed',
         component:YourfeedComponent,
-        canActivate:[AuthGaurdService]
+        canActivate:[AuthGaurdService],
+        children:[{
+          path:'',
+          component:TagsComponent
+        }]
       }]
   },{
     path:'newarticle',
@@ -96,7 +100,11 @@ const routes: Routes = [{
     canActivate:[AuthGaurdService],
     children:[{
       path:'',
-      component:MypostsComponent
+      component:MypostsComponent,
+      children:[{
+        path:'',
+        component:TagsComponent
+      }]
     }]
   },{
     path:'article',
