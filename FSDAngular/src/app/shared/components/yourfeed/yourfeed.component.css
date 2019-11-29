@@ -152,7 +152,7 @@ body {
     padding: 10px;
     box-sizing: border-box;
     /* position: relative; */
-    z-index:999;
+   
 }
 
 .description:after {
@@ -258,3 +258,40 @@ img {
     border-radius: 30px;
     margin-right:1%;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container{
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0;
+  }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0;
+    }
+   
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0;
+    }
+   
+  } 
+  
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* @media only screen and (min-width: 992px) {
+    .tags1 {float: none;
+        width: 100%;}
+
+  }  */
