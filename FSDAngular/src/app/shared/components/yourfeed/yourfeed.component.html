@@ -1,4 +1,4 @@
-<div class="article-preview" *ngFor="let post of posts">
+<!-- <div class="article-preview" *ngFor="let post of posts">
         <div class="article-meta">
             <a href="Username">
                 <img src={{post.url}}>
@@ -9,13 +9,13 @@
                 <span class="date"> {{post.date}} </span>
             </div>
     
-            <div id="app-favorite-button" class="pull-xs-right">
+            <div id="app-favorite-button" class="pull-xs-right"> -->
     
                 <!-- <button type="button" class="btn btn-default btn-sm" id="like">
                     <span class="glyphicon glyphicon-thumbs-up"></span> Like
                 </button>
      -->
-            </div>
+            <!-- </div>
             <div>
                 <a (click)="route(post._id)"><h3>{{post.title}}</h3></a>
             </div>
@@ -30,4 +30,82 @@
             </span> 
             <hr>
     </div>
+</div> -->
+
+<!-- 
+<div class="article-preview" *ngFor="let post of posts">
+        <div class="article-meta">
+            <a href="Username">
+                    <img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
+            </a>
+            
+            <div class="info">
+                <a class="author" href="/profile/username"> {{post.username}} </a>
+                <span class="date"> {{post.date}} </span>
+    
+            </div>
+            <div id="app-favorite-button" class="pull-xs-right">
+                    
+                            <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,post._id)">
+                              <span class="glyphicon glyphicon-thumbs-up"></span> Like ({{post.likes.length}})
+                            </button>
+                          
+                </div>
+                <div>
+                    <a (click)="route(post._id)"><h3>{{post.title}}</h3></a>
+                </div>
+                <div>
+                    <h6 [innerHTML]="post.post">
+                        
+                    </h6>
+                </div>
+                <span id="attachment" >
+                    <img src={{post.image_url}} class="img-responsive" >
+                    
+                </span> 
+                <hr>
+                
+    </div> 
+      
+       
+     </div>
+    -->
+
+<!--new trial post card-->
+<div >
+    <router-outlet></router-outlet>
+</div>
+
+<div class="container" *ngFor="let post of posts" >
+<div class="blog-card">
+    <!-- <div class="photo" [ngStyle]="{background: url(post.url)}"></div> -->
+    <div class="photo">
+        <img class="photo" src={{post.image_url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
+    </div>
+    <ul class="details">
+        <li class="author">Autor: {{post.username}}</li>
+        <li class="date">Data: {{post.date}}</li>
+        <li class="tags" >
+        <ul>
+            <li>{{post.tags}}</li>
+            
+        </ul>
+        </li>
+    </ul>
+    <!-- <button style="float: right; margin-right: 2%; margin-top:2%"type="button" class="btn btn-default btn-sm pull-xs-right" id="like" (click)="myClickFunction($event,post._id)">
+            Like ({{post.likes.length}})
+         </button> -->
+    <div class="description">
+            
+        <h1><img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">{{post.username}}
+            
+        </h1>
+        
+        <h2>{{post.title}}</h2>
+        <p class="summary"[innerHTML]="post.post"></p>
+        <a (click)="route(post._id)">Read more</a>
+    </div>
+    
+</div>
+
 </div>
