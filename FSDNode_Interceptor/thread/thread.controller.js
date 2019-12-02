@@ -13,6 +13,7 @@ router.get('/deleteThread',deleteThread);
 router.get('/myPosts',myPosts);
 router.post('/updateThread', updateThread);
 router.get('/searchByTags',searchByTags);
+router.get('/latestTags',latestTags);
 
 function createThread(req, res, next) {    
    
@@ -225,4 +226,17 @@ function searchByTags(req,res){
     res.sendStatus(400);
 }
 }
+function latestTags (req, res, next) {
+    
+    let url = 'https://thread-service.herokuapp.com/thread/latestTags'
+  
+        var propertiesObject = {};
+
+        request({url:url, qs:propertiesObject}, function(err, response, body) {
+          if(err) { res.send(err); return; }
+          let json = JSON.parse(body);
+          res.json(json);
+        });
+    }
+
 module.exports = router;
