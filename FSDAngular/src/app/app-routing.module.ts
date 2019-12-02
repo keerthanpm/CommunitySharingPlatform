@@ -68,7 +68,11 @@ const routes: Routes = [{
     component: DashboardComponent,
     children:[{
         path:'',
-        component:YourfeedComponent
+        component:YourfeedComponent,
+        children:[{
+          path:'',
+          component:TagsComponent
+        }]
       },
       {
         path:'globalfeed',
