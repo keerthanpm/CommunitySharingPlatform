@@ -18,7 +18,7 @@
                                 name="search" id="search-field">
                         </div>
                     </form>
-                    <ul class="nav navbar-nav" style="float:right">
+                    <ul class="nav navbar-nav" id="showonlg"style="float:right">
 
                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"
                                 href="#">{{username}} <span> <img src={{url}}
@@ -31,11 +31,13 @@
                         </li>
                     </ul>
                     <p class="navbar-text navbar-right">
-                        <a class="navbar-link login" routerLink="/dashboard">Home</a>
+                       <span> <a class="navbar-link login" routerLink="/dashboard">Home</a>
                         <a class="navbar-link login" routerLink="newarticle">New Article</a>
-                        <!-- <a class="navbar-link login" routerLink="settings">Settings</a> 
-                            <a class="navbar-link login" routerLink="profile">{{username}}</a>
-                            <a class="navbar-link login" (click)="logout()">Logout</a></p> -->
+                        <a class="navbar-link login" id="navi" routerLink="settings">Settings</a> 
+                            <a class="navbar-link login" id="navi" routerLink="profile">{{username}}</a>
+                            <a class="navbar-link login" id="navi" (click)="logout()">Logout</a>
+                        </span>
+                        </p>
                 </div>
             </div>
         </nav>
