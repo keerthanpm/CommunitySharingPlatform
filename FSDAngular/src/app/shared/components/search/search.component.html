@@ -9,7 +9,7 @@
         <div class="article-preview" *ngFor="let search of searcharr|keyvalue">
             <div class="article-meta">
                 <a href="Username">
-                        <img src={{search.value.url}}>
+                        <img src={{search.value.url}} onerror="this.src='../../../../assets/images/smiley-cyrus.jpg'">
                 </a>
                 
                 <div class="info">
@@ -33,7 +33,7 @@
                         </h6>
                     </div>
                     <span id="attachment" >
-                        <img src={{search.value.image_url}} class="img-responsive" >
+                        <img src={{search.value.image_url}} class="img-responsive" onerror="this.src='assets/images/smiley-cyrus.jpg'" >
                         
                     </span> 
                     <hr>

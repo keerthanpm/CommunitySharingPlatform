@@ -3,7 +3,7 @@
         <h1>{{post.title}}</h1>
         <div class="article-meta">
             <a href="Username">
-                <img src={{post.url}}>
+                <img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
             </a>
 
             <div class="info">
@@ -18,7 +18,7 @@
     <div class="container">
         <h4 [innerHTML]="post.post"></h4>
         <span id="attachment" >
-            <img src={{post.image_url}} class="img-responsive" >
+            <img src={{post.image_url}} class="img-responsive" onerror="this.src='assets/images/smiley-cyrus.jpg'" >
             
         </span> 
 </div>
@@ -42,7 +42,7 @@
                                 <ul class="media-list">
                                     <li class="media">
                                         <a href="#" class="pull-left">
-                                            <img src={{c.url}} alt="" class="img-circle">
+                                            <img src={{c.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'" alt="" class="img-circle">
                                         </a>
                                         <div class="media-body">
                                             <span class="text-muted pull-right">
