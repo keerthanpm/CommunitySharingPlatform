@@ -32,6 +32,9 @@
         <input 
         id="art2"
           formControlName="image" type="text" class="form-control" placeholder="Attachment URL" value="" >
+          <div id="label1" *ngIf="registrationForm.get('image').invalid && registrationForm.get('image').touched">
+              <small *ngIf="registrationForm.get('image').errors?.pattern" class="text-danger">Enter a valid URL</small>
+            </div>
         <!-- <div id="label1">
           <small class="text-danger">article about is required</small>
 

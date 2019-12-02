@@ -64,14 +64,21 @@
         <div class="description">
             <img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">   
             <h1 style="display: inline;" >{{post.username}}
+                
           
             </h1>
             
             <h2>{{post.title}}</h2>
             <p class="summary"[innerHTML]="post.post"></p>
+            
             <a (click)="route(post._id)">Read more</a>
+           
+                    <!-- <span>Secondary</span> -->
+            
         </div>
         
+        
     </div>
+    
     
 </div>
