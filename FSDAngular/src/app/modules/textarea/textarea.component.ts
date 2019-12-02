@@ -44,7 +44,7 @@ export class TextareaComponent implements OnInit {
       console.log("Inside Edit Article")
       console.log(response)
       this.article=response
-      this.value=this.article.post==undefined?"":this.article.post
+      //this.value=this.article.post==undefined?"":this.article.post
       sessionStorage.removeItem('id')
       
     })
