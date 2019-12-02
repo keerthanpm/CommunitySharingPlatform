@@ -30,10 +30,18 @@ const routes: Routes = [{
     component:HomeComponent,
     children:[{
       path:'',
-      component:GlobalfeedComponent
+      component:GlobalfeedComponent,
+      children:[{
+        path:'',
+        component:TagsComponent
+      }]
     },{
       path:'globalfeed',
-      component:GlobalfeedComponent
+      component:GlobalfeedComponent,
+      children:[{
+        path:'',
+        component:TagsComponent
+      }]
       
     },{
       path:'yourfeed',
