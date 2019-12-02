@@ -74,6 +74,9 @@
             <a (click)="route(post._id)">Read more</a>
            
                     <!-- <span>Secondary</span> -->
+                    <span *ngIf="post.__v!=0">
+                        updated
+                    </span>
             
         </div>
         
