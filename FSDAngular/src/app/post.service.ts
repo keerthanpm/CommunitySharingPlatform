@@ -9,6 +9,7 @@ export class PostService {
   private REST_API_SERVER = "http://localhost:4000/thread/get";
   private REST_LIKE_ROUTE = "http://localhost:4000/thread/like";
   private REST_POST_ROUTE = "http://localhost:4000/thread/post";
+  private REST_REPLY_ROUTE = "https://thread-service.herokuapp.com/thread/postReply";
 
   constructor(private httpClient: HttpClient) { }
 
@@ -53,6 +54,18 @@ export class PostService {
       post: post,
       userId: sessionStorage.getItem('username')}).subscribe();
   }
+
+  public postReply(timestamp,reply,threadId){
+    let body = {
+      threadId: threadId,
+      post: reply,
+      username: sessionStorage.getItem('username'),
+      timestamp:timestamp
+    }
+    this.httpClient.post(this.REST_REPLY_ROUTE,body).subscribe();
+  }
+
+  
 
  
   

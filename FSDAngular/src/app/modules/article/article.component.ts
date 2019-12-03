@@ -14,6 +14,8 @@ export class ArticleComponent implements OnInit {
   username:string
   commentusername:string
   comment="";
+  date1="";
+  reply="";
 
   constructor(private postService:PostService,private settingService:SettingService ) { 
 
@@ -88,6 +90,18 @@ export class ArticleComponent implements OnInit {
     
       
   // });
+  }
+  load(date){
+    if(this.date1==""){
+      this.date1=date;
+    }
+    else{
+      this.date1=""
+    }
+  }
+
+  PostReply(timestamp,reply,threadId){
+    this.postService.postReply(timestamp,reply,threadId)
   }
   
 

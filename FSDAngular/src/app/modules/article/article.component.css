@@ -139,4 +139,18 @@ h6{
    
   }
 
+  #comment-icon{
+    color: gray;
+    cursor: pointer;
+    float: right;
+}
+
+#comment-icon:hover{
+    color:black;
+}
+
+.reply{
+    margin-left: 10%;
+}
+
   
