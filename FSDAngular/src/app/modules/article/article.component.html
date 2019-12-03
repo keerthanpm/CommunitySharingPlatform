@@ -1,6 +1,8 @@
 <div class="banner">
     <div class="container">
-        <h1>{{post.title}}</h1>
+        <h1>{{post.title}}  <span id="dot" *ngIf="post.__v!=0">
+            <span class="dot" title="Edited"></span>
+        </span></h1>
         <div class="article-meta">
             <a href="Username">
                 <img src={{post.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
@@ -18,7 +20,7 @@
     <div class="container">
         <h4 [innerHTML]="post.post"></h4>
         <span id="attachment" >
-            <img src={{post.image_url}} class="img-responsive" onerror="this.src='assets/images/smiley-cyrus.jpg'" >
+            <img src={{post.image_url}} id="img" class="img-responsive" onerror="this.src='assets/images/smiley-cyrus.jpg'" >
             
         </span> 
 </div>
