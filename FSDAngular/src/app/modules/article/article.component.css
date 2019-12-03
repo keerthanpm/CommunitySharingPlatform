@@ -122,3 +122,21 @@ h6{
     
 
 }
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #5cb85c;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 3px;
+    cursor: pointer;
+  }
+
+  #img:hover{
+    transform: scale(5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    
+   
+  }
+
+  

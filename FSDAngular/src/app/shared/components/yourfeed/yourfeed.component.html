@@ -101,7 +101,9 @@
             
         </h1>
         
-        <h2>{{post.title}}</h2>
+        <h2>{{post.title}} <span id="dot" *ngIf="post.__v!=0">
+            <span class="dot" title="Edited"></span>
+        </span></h2>
         <p class="summary"[innerHTML]="post.post"></p>
         <a (click)="route(post._id)">Read more</a>
     </div>

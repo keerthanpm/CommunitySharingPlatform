@@ -320,4 +320,6 @@ img {
     }
 
   }  
-   
+   i{
+     cursor: pointer;
+   }

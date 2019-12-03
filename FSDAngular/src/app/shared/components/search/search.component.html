@@ -6,7 +6,7 @@
     </div>
     </div>
     <ng-template #elseBlock>
-        <div class="article-preview" *ngFor="let search of searcharr|keyvalue">
+        <!-- <div class="article-preview" *ngFor="let search of searcharr|keyvalue">
             <div class="article-meta">
                 <a href="Username">
                         <img src={{search.value.url}} onerror="this.src='../../../../assets/images/smiley-cyrus.jpg'">
@@ -17,13 +17,13 @@
                     <span class="date"> November 2, 2019 </span>
         
                 </div>
-                <div id="app-favorite-button" class="pull-xs-right">
+                <div id="app-favorite-button" class="pull-xs-right"> -->
                         
                                 <!-- <button type="button" class="btn btn-default btn-sm" id="like" (click)="myClickFunction($event,'112',post._id)">
                                   <span class="glyphicon glyphicon-thumbs-up"></span> Like 
                                 </button>
                                -->
-                    </div>
+                    <!-- </div>
                     <div>
                         <h3>{{search.value.title}}</h3>
                     </div>
@@ -39,7 +39,45 @@
                     <hr>
         </div>    
            
-         </div>
+         </div> -->
+         <div class="container" *ngFor="let search of searcharr|keyvalue" >
+            <div class="blog-card">
+                <!-- <div class="photo" [ngStyle]="{background: url(post.url)}"></div> -->
+                <div class="photo">
+                    <img class="photo" src={{search.value.image_url}} onerror="this.src='assets/images/smiley-cyrus.jpg'">
+                </div>
+                <ul class="details">
+                    <li class="author">Autor: {{search.value.username}}</li>
+                    <li class="date">Data: {{search.value.date}}</li>
+                    <li class="tags" >
+                    <ul>
+                        <li>{{search.value.tags}}</li>
+                        
+                    </ul>
+                    </li>
+                </ul>
+               
+                <div class="description">
+                    <img src={{search.value.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'"> 
+                    <h3 style="display: inline;" >{{search.value.username}}</h3>
+                    
+                    <h2>{{search.value.title}} <span id="dot" *ngIf="search.value.__v!=0">
+                        <span class="dot" title="Edited"></span>
+                    </span></h2>
+                    <p class="summary"[innerHTML]="search.value.post"></p>
+                    
+                    <a (click)="route(search.value._id)">Read more</a>
+                   
+                           
+                </div>
+                
+                
+             
+            </div>
+            
+        
+            
+        </div>
     </ng-template>
     
     

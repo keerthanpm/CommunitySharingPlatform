@@ -295,3 +295,13 @@ img {
         width: 100%;}
 
   }  */
+
+  .dot {
+    height: 7px;
+    width: 7px;
+    background-color: #5cb85c;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 3px;
+    cursor: pointer;
+  }
