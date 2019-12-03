@@ -68,7 +68,15 @@
             <h2>{{post.title}} <span id="dot" *ngIf="post.__v!=0">
                 <span class="dot" title="Edited"></span>
             </span></h2>
-            <p class="summary"[innerHTML]="post.post"></p>
+            
+            <p class="summary"[innerHTML]="post.post.slice(0,53)">
+                    
+            </p>
+            <h6 style="float: left;">
+                    ....
+                </h6>
+           
+            
             
             <a (click)="route(post._id)">Read more</a>
            
