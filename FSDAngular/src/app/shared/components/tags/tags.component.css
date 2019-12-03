@@ -42,7 +42,18 @@
 
   }  */
   
-  
+  .tags{
+      float: left;
+      width: 20%;
+      height: 100%;
+
+  }
+
+  .badge{
+      /* margin: 0; */
+      /* padding: 0; */
+      float: left;
+  }
   
   
   
