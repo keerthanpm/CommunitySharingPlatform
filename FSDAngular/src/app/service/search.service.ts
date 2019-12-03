@@ -27,6 +27,10 @@ export class SearchService {
     return this.httpClient.get("http://localhost:4000/thread/searchByTags"+"?searchTerm="+searchterm);
 
   }
+
+  getTags(){
+    return this.httpClient.get("http://localhost:4000/thread/latestTags")
+  }
 }
 
 
