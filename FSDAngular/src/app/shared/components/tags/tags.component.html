@@ -16,7 +16,7 @@
         <span class="badge" id="btn" (click)="click('css')">css</span>
         <span class="badge" id="btn" (click)="click('bootstrap')">bootstrap</span>
         <span class="badge" id="btn" (click)="click('ibmcloud')">ibmcloud</span> -->
-        <div class="tags" *ngFor="let tag of tags;" >
+        <div class="tags" *ngFor="let tag of tags;" style="float: left;" >
 
             <span class="badge" id="btn" (click)="click(tag)" >{{tag}}</span>
 

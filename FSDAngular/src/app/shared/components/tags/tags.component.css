@@ -5,6 +5,7 @@
     padding: 5px 10px 10px;
     background: #f3f3f3;
     border-radius: 4px;
+    width: 20%;
     
     
 
@@ -44,18 +45,7 @@
 
   }  */
   
-  .tags{
-      float: left;
-      width: 20%;
-      height: 100%;
-
-  }
-
-  .badge{
-      /* margin: 0; */
-      /* padding: 0; */
-      float: left;
-  }
+  
   
   
   
