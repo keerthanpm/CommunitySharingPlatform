@@ -1,6 +1,6 @@
 <div class="banner">
     <div class="container">
-        <h1>{{post.title}} <span id="dot" *ngIf="post.__v!=0">
+        <h1>{{post.title}} <span id="dot" *ngIf="post[__v]!=0">
                 <span class="dot" title="Edited"></span>
             </span></h1>
         <div class="article-meta">
@@ -68,26 +68,33 @@
                                 </ul>
 
                                 <div class="reply" *ngIf="c.date==date1">
+                                    
                                     <!--Reply content-->
-                                    <div  >
+
+                                    
+                                    <div *ngFor="let r of c.replies">
+                                        
+                                        
+                                            
                                             <ul class="media-list">
                                                 <li class="media">
-                                                    <!-- <a href="#" class="pull-left">
-                                                        <img src={{c.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'"
+                                                    <a href="#" class="pull-left">
+                                                        <img src={{r.url}} onerror="this.src='assets/images/smiley-cyrus.jpg'"
                                                             alt="" class="img-circle">
-                                                    </a> -->
+                                                    </a>
                                                     <div class="media-body2">
-    
-                                                        <strong class="text-success">{{c.replies.username}}</strong>
+
+                                                        <strong class="text-success">{{r.username}}</strong>
                                                         <p>
-                                                            {{c.replies.post}}
+                                                            {{r.post}}
                                                         </p>
                                                     </div>
                                                 </li>
                                             </ul>
-                                        </div>
-    
-                                        <!--Reply content-->
+                                        
+                                    </div>
+
+                                    <!--Reply content-->
                                     <textarea class="form-control" placeholder="write a comment..." rows="4"
                                         [(ngModel)]="reply"></textarea>
                                     <br>
@@ -95,7 +102,7 @@
                                         (click)="PostReply(c.date,reply,post._id)">Reply</button>
                                     <div class="clearfix"></div>
                                     <hr>
-                                    
+
 
 
                                 </div>
