@@ -1,6 +1,6 @@
 <div class="tags1">
     <h4>Recent Tags</h4>
-        <!-- <span class="badge" id="btn" (click)="click('spring')" >spring</span>
+    <!-- <span class="badge" id="btn" (click)="click('spring')" >spring</span>
         <span class="badge" id="btn" (click)="click('angular')" >angular</span>
         <span class="badge" id="btn" (click)="click('node')">node</span>
         <span class="badge" id="btn" (click)="click('aws')">aws</span><br>
@@ -16,15 +16,37 @@
         <span class="badge" id="btn" (click)="click('css')">css</span>
         <span class="badge" id="btn" (click)="click('bootstrap')">bootstrap</span>
         <span class="badge" id="btn" (click)="click('ibmcloud')">ibmcloud</span> -->
-        <div class="tags" *ngFor="let tag of tags;" style="float: left;" >
+    <div class="tags" *ngFor="let tag of tags;" style="float: left;">
 
-            <span class="badge" id="btn" (click)="click(tag)" >{{tag}}</span>
+        <span class="badge" id="btn" (click)="click(tag)">{{tag}}</span>
 
-        </div>
     </div>
+
+    <div class="tags"  style="float: left;">
+            <h4>Popular Tags</h4>
+            <span class="badge" id="btn" (click)="click('spring')">spring</span>
+            <span class="badge" id="btn" (click)="click('angular')">angular</span>
+            <span class="badge" id="btn" (click)="click('node')">node</span>
+            <span class="badge" id="btn" (click)="click('aws')">aws</span><br>
+            <span class="badge" id="btn" (click)="click('java')">java</span>
+            <span class="badge" id="btn" (click)="click('mongodb')">mongodb</span>
+            <span class="badge" id="btn" (click)="click('mysql')">mysql</span>
+            <span class="badge" id="btn" (click)="click('mlab')">mlab</span><br>
+            <span class="badge" id="btn" (click)="click('heroku')">heroku</span>
+            <span class="badge" id="btn" (click)="click('react')">react</span>
+            <span class="badge" id="btn" (click)="click('zipkin')">zipkin</span>
+            <span class="badge" id="btn" (click)="click('rabbitmq')">rabbitmq</span><br>
+            <span class="badge" id="btn" (click)="click('html')">html</span>
+            <span class="badge" id="btn" (click)="click('css')">css</span>
+            <span class="badge" id="btn" (click)="click('bootstrap')">bootstrap</span>
+            <span class="badge" id="btn" (click)="click('ibmcloud')">ibmcloud</span>
+        </div>
+
+</div>
 
 <!-- <div class="tags1">
  <button type="button" id="btn" class=" btn btn-success" (click)="click('spring')">Spring</button>
  <button type="button" id="btn" class="btn btn-success" (click)="click('node')" >Node </button>    
          
 </div> -->
+
