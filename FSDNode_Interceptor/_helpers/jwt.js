@@ -11,7 +11,8 @@ function jwt() {
             //'/users/register',
             '/thread/search',
            // '/thread/post',
-            '/thread/get'
+            '/thread/get',
+            '/thread/latestTags'
         ]
     });
 }
