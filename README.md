@@ -1,4 +1,4 @@
-# FSDAngular3
+# Communtity Sharing Platform
 
 
 A community sharing platform based on Angular, Node and Spring Boot 
