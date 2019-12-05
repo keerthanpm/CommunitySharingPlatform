@@ -12,6 +12,9 @@ router.get('/deleteThread', deleteThread)
 router.post('/updateThread', updateThread)
 router.get('/myPosts', myPosts)
 router.get('/searchByTags',searchByTags);
+router.get('/latestTags',latestTags);
+router.post('/postReply', createPostReply);
+
 
 function createThread(req, res, next) {    
     if(req.body.title && req.body.post&&req.body.userId && req.body.tags) {
@@ -30,10 +33,18 @@ function createThread(req, res, next) {
 function createPost(req, res, next) {
     if(req.body.threadId && req.body.post && req.body.userId) {
         threadService.createPost(req.body.threadId, req.body.post,req.body.userId)
-        .then((value) => {            
-            res.json({value});
-        })
-        .catch(err => next(err))
+        .then(res.sendStatus(200))
+        .catch()
+    } else {
+        res.sendStatus(400);
+    }
+}
+
+function createPostReply(req, res, next) {
+    if(req.body.timestamp && req.body.post &&req.body.username  && req.body.threadId) {
+        threadService.createPostReply(req.body.timestamp, req.body.post,req.body.threadId,req.body.username)
+        .then(res.sendStatus(200))
+        .catch()
     } else {
         res.sendStatus(400);
     }
@@ -125,6 +136,13 @@ function searchByTags(req,res){
 }else{
     res.sendStatus(400);
 }
+}
+function latestTags(req,res){
+    
+       
+        threadService.latest().then(thread => { res.json(thread)})
+        .catch(err => next(err))
+
 }
 
 module.exports = router;

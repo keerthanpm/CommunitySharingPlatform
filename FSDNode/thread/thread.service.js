@@ -12,7 +12,9 @@ module.exports = {
     deleteThread,
     updateThread,
     myPosts,
-    searchByTags
+    searchByTags,
+    latest,
+    createPostReply
 };
 
 async function createThread (title, post,id,tags,image ) {
@@ -25,30 +27,30 @@ async function createThread (title, post,id,tags,image ) {
         image_url: image
         
     });
-    return await thread.save().then(res => {
-        axios.post('http://127.0.0.1:5000/add', {
-            name: res._id
-        }).then(resp => {
-            console.log(resp.data);
-        })
-        .catch(error => {
-            console.log(error);            
-        })
-        return res._id;});
+    return await thread.save().then();
 }
 
 async function createPost (threadId, post,id) {
     console.log('Id of thread:'+threadId)
     return await Thread.findByIdAndUpdate(threadId, {$push: {comment: {post:post,username:id,date:Date.now()}}}).then(success => {
-       res.sendStatus(200);
+       
     }).catch(error=>{
         res.send(500)
+    })
+}
+async function createPostReply (timestamp, post,threadId,username) {
+    console.log('Id of thread:'+threadId)
+    return await Thread.findOneAndUpdate({'comment.date': timestamp}, {'$push': {'comment.$.replies':{post:post,username:username}}}).then(success => {
+      
+       
+    }).catch(error=>{
+        console.log(error);
     })
 }
 
 async function getAll() {
     
-    return await Thread.find({})
+    return await Thread.find({}).sort({date:1}) 
     .then(thread => {
         return thread;
     })
@@ -108,9 +110,8 @@ async function deleteThread(threadId){
 }
 
 async function updateThread(threadId,newpost,newtitle, tag, images){
-   
-   console.log(tag);
-    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost, tags: tag, image_url: images}}).then(success => {
+   const v =1;   
+    return await Thread.findByIdAndUpdate(threadId, {$set: {title: newtitle, post: newpost, tags: tag, image_url: images,__v:v}}).then(success => {
         res.sendStatus(200);
      }).catch(error=>{
          res.send(500)
@@ -136,5 +137,19 @@ async function searchByTags (searchTerm){
         }).catch(error => {
             return error;            
         });
+    
+}
+
+async function latest (){
+     return await Thread.find({}).select({"tags":1, "_id":0}).sort({ date: -1 }).then(
+         thread=>{
+             return thread;
+         }
+     ).catch(error=>{
+         return error;
+     });
+
+   
+    
     
 }

@@ -13,7 +13,12 @@ const threadModel = mongoose.Schema({
     comment: { type : Array , "comment" : [{
        post: String,
        username: String,
-       date: Date
+       date: Date,
+       replies:{ type:Array,"replies":[{
+        username: String,
+        post:String
+    }]
+ }
 
 }]
 
