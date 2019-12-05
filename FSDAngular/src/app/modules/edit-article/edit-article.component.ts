@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { GetarticleService, article } from 'src/app/service/getarticle.service';
 import { TextareaService } from 'src/app/service/textarea.service';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-article',
@@ -53,14 +54,26 @@ isSubmitting=false;
     this.article.post=this.textareaService.givedata();
     this.getArticleService.updatearticle(article).subscribe(response=>{
     })
-    alert("Updated Successfully..!")
+    // alert("Updated Successfully..!")
+     Swal.fire({
+      icon: 'success',
+      title: 'yayyy!!!',
+      text: 'Your post has been updated successfully',
+      
+    })
     this.router.navigate(['/dashboard/profile'])
 
   }
 
   deletearticle(){
     this.getArticleService.deletearticle(sessionStorage.getItem('id')).subscribe(response=>{
-      alert("Deleted Sucessfully...")
+      // alert("Deleted Sucessfully...")
+      Swal.fire({
+        icon: 'success',
+        title: 'Deleted!!!',
+        text: 'Your post has been deleted successfully successfully',
+        
+      })
     })
   }
   

@@ -35,8 +35,7 @@ export class NewArticleComponent implements OnInit {
   }
   constructor(private fb: FormBuilder, private newarticle: NewarticleService, private router: Router,private textareaService:TextareaService,private http:HttpClient) {
     this.registrationForm = fb.group({
-      'image': [''],
-      //[Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]
+      'image': ['',[Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
       'articleTittle': ['', [Validators.required]],
       'yourArticle': [''],
       'tags': ['', Validators.required],

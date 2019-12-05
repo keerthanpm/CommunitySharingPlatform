@@ -2708,3 +2708,203 @@ org.eclipse.debug.core.DebugException: Launch configuration MailServer - MailSer
 2019-11-27 11:09:29,300 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-11-27 11:09:29,305 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\b8ibmjava20\Desktop\FinalProject\FSDAngular3\FSDSpring\rabbitmq-consumer\src\test\resources
 2019-11-28 09:05:13,342 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-12-03 12:31:40,810 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-12-03 12:32:24,251 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-config-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-config-server\pom.xml.
+2019-12-03 12:32:26,832 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-admin-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-admin-server\pom.xml.
+2019-12-03 12:32:29,454 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:zuul-edge-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\zuul-edge-server\pom.xml.
+2019-12-03 12:32:30,052 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-boot-jwt:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-boot-jwt\pom.xml.
+2019-12-03 12:32:31,680 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mycompany:spring-boot-jparepository:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-producer\pom.xml.
+2019-12-03 12:32:32,295 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mycompany:spring-boot-jparepository:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-consumer\pom.xml.
+2019-12-03 12:32:32,862 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:MailService:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\MailServer\pom.xml.
+2019-12-03 12:32:34,937 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-discovery-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-discovery-server\pom.xml.
+2019-12-03 12:32:38,990 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /zuul-edge-server/src/main/java
+2019-12-03 12:32:38,991 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /zuul-edge-server/src/main/resources
+2019-12-03 12:32:39,001 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /zuul-edge-server/src/main/resources
+2019-12-03 12:32:39,013 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /zuul-edge-server/src/test/java
+2019-12-03 12:32:45,887 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:45,892 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:45,920 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:32:45,923 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:45,923 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\zuul-edge-server\src\test\resources
+2019-12-03 12:32:49,791 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-admin-server/src/main/java
+2019-12-03 12:32:49,791 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-admin-server/src/main/resources
+2019-12-03 12:32:49,796 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-admin-server/src/main/resources
+2019-12-03 12:32:49,802 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-admin-server/src/test/java
+2019-12-03 12:32:50,745 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:50,745 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:50,752 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:32:50,755 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:50,755 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-admin-server\src\test\resources
+2019-12-03 12:32:51,797 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-producer/src/main/java
+2019-12-03 12:32:51,798 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-producer/src/main/resources
+2019-12-03 12:32:51,802 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-producer/src/main/resources
+2019-12-03 12:32:51,807 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-producer/src/test/java
+2019-12-03 12:32:54,158 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:54,159 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:54,167 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:54,179 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:54,179 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-producer\src\test\resources
+2019-12-03 12:32:54,777 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-discovery-server/src/main/java
+2019-12-03 12:32:54,777 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-discovery-server/src/main/resources
+2019-12-03 12:32:54,782 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-discovery-server/src/main/resources
+2019-12-03 12:32:54,786 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-discovery-server/src/test/java
+2019-12-03 12:32:55,417 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:55,417 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:55,425 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:32:55,427 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:55,427 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-discovery-server\src\test\resources
+2019-12-03 12:32:56,190 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-boot-jwt/src/main/java
+2019-12-03 12:32:56,190 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-boot-jwt/src/main/resources
+2019-12-03 12:32:56,195 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-boot-jwt/src/main/resources
+2019-12-03 12:32:56,207 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-boot-jwt/src/test/java
+2019-12-03 12:32:57,707 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:57,707 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:57,715 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:57,730 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:57,730 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-boot-jwt\src\test\resources
+2019-12-03 12:32:58,420 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-config-server/src/main/java
+2019-12-03 12:32:58,421 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-config-server/src/main/resources
+2019-12-03 12:32:58,427 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-config-server/src/main/resources
+2019-12-03 12:32:58,431 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-config-server/src/test/java
+2019-12-03 12:32:59,010 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:59,010 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:32:59,011 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:32:59,025 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:32:59,026 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-config-server\src\test\resources
+2019-12-03 12:32:59,434 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MailServer/src/main/java
+2019-12-03 12:32:59,434 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MailServer/src/main/resources
+2019-12-03 12:32:59,438 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MailServer/src/main/resources
+2019-12-03 12:32:59,442 [Worker-14: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MailServer/src/test/java
+2019-12-03 12:33:00,161 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:00,161 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:00,168 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:00,178 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:00,178 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\MailServer\src\test\resources
+2019-12-03 12:33:00,856 [Worker-14: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 8 project(s) in 43 sec
+2019-12-03 12:33:04,042 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2019-12-03 12:33:06,139 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-config-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-config-server\pom.xml.
+2019-12-03 12:33:06,905 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-admin-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-admin-server\pom.xml.
+2019-12-03 12:33:07,637 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:zuul-edge-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\zuul-edge-server\pom.xml.
+2019-12-03 12:33:08,099 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-boot-jwt:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-boot-jwt\pom.xml.
+2019-12-03 12:33:08,645 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mycompany:spring-boot-jparepository:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-producer\pom.xml.
+2019-12-03 12:33:09,081 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.mycompany:spring-boot-jparepository:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-consumer\pom.xml.
+2019-12-03 12:33:09,569 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:MailService:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\MailServer\pom.xml.
+2019-12-03 12:33:10,313 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:spring-discovery-server:0.0.1-SNAPSHOT @ E:\FSDAngular3\FSDAngular3\FSDSpring\spring-discovery-server\pom.xml.
+2019-12-03 12:33:15,759 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MailServer/src/main/java
+2019-12-03 12:33:15,759 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MailServer/src/main/resources
+2019-12-03 12:33:15,760 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /MailServer/src/main/resources
+2019-12-03 12:33:15,760 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /MailServer/src/test/java
+2019-12-03 12:33:18,607 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:18,614 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:18,655 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:18,672 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:18,672 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\MailServer\src\test\resources
+2019-12-03 12:33:19,381 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-consumer/src/main/java
+2019-12-03 12:33:19,381 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-consumer/src/main/resources
+2019-12-03 12:33:19,385 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-consumer/src/main/resources
+2019-12-03 12:33:19,393 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-consumer/src/test/java
+2019-12-03 12:33:20,651 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:20,651 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:20,666 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:20,684 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:20,684 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-consumer\src\test\resources
+2019-12-03 12:33:21,390 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-producer/src/main/java
+2019-12-03 12:33:21,391 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-producer/src/main/resources
+2019-12-03 12:33:21,391 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /rabbitmq-producer/src/main/resources
+2019-12-03 12:33:21,391 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /rabbitmq-producer/src/test/java
+2019-12-03 12:33:22,581 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:22,581 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:22,587 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:22,592 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:22,592 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-producer\src\test\resources
+2019-12-03 12:33:22,742 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-admin-server/src/main/java
+2019-12-03 12:33:22,742 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-admin-server/src/main/resources
+2019-12-03 12:33:22,743 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-admin-server/src/main/resources
+2019-12-03 12:33:22,743 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-admin-server/src/test/java
+2019-12-03 12:33:23,830 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:23,831 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:23,833 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:23,834 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:23,834 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-admin-server\src\test\resources
+2019-12-03 12:33:24,009 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-boot-jwt/src/main/java
+2019-12-03 12:33:24,009 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-boot-jwt/src/main/resources
+2019-12-03 12:33:24,009 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-boot-jwt/src/main/resources
+2019-12-03 12:33:24,010 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-boot-jwt/src/test/java
+2019-12-03 12:33:27,137 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:27,138 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:27,144 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:27,153 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:27,153 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-boot-jwt\src\test\resources
+2019-12-03 12:33:27,287 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-config-server/src/main/java
+2019-12-03 12:33:27,288 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-config-server/src/main/resources
+2019-12-03 12:33:27,289 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-config-server/src/main/resources
+2019-12-03 12:33:27,289 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-config-server/src/test/java
+2019-12-03 12:33:33,077 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:33,078 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:33,078 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:33,087 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:33,088 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-config-server\src\test\resources
+2019-12-03 12:33:33,261 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-discovery-server/src/main/java
+2019-12-03 12:33:33,261 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-discovery-server/src/main/resources
+2019-12-03 12:33:33,262 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /spring-discovery-server/src/main/resources
+2019-12-03 12:33:33,262 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /spring-discovery-server/src/test/java
+2019-12-03 12:33:34,670 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:34,670 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:34,679 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:34,680 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:34,681 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-discovery-server\src\test\resources
+2019-12-03 12:33:34,823 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /zuul-edge-server/src/main/java
+2019-12-03 12:33:34,823 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /zuul-edge-server/src/main/resources
+2019-12-03 12:33:34,824 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /zuul-edge-server/src/main/resources
+2019-12-03 12:33:34,824 [Worker-17: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /zuul-edge-server/src/test/java
+2019-12-03 12:33:35,837 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:35,837 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:35,844 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:35,847 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:35,848 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\zuul-edge-server\src\test\resources
+2019-12-03 12:33:37,029 [Worker-17: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 32 sec
+2019-12-03 12:33:39,768 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:39,769 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:39,800 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:39,884 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:39,903 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\MailServer\src\test\resources
+2019-12-03 12:33:41,740 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:41,740 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:41,742 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:41,746 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:41,746 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-consumer\src\test\resources
+2019-12-03 12:33:43,065 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:43,065 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:43,068 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:43,071 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:43,071 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-producer\src\test\resources
+2019-12-03 12:33:43,204 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:43,204 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:43,229 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:43,231 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:43,231 [Worker-9: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-admin-server\src\test\resources
+2019-12-03 12:33:44,840 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:44,840 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:44,842 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:44,846 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:44,846 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-boot-jwt\src\test\resources
+2019-12-03 12:33:45,444 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:45,445 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:45,445 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:45,464 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:45,464 [Worker-4: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-config-server\src\test\resources
+2019-12-03 12:33:46,455 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:46,456 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:46,463 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:46,464 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:46,464 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\spring-discovery-server\src\test\resources
+2019-12-03 12:33:49,624 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:49,624 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2019-12-03 12:33:49,627 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:33:49,630 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:33:49,630 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\zuul-edge-server\src\test\resources
+2019-12-03 12:49:04,810 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:49:04,810 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:49:04,810 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-12-03 12:49:04,812 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-12-03 12:49:04,812 [Worker-24: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\FSDAngular3\FSDAngular3\FSDSpring\rabbitmq-consumer\src\test\resources
