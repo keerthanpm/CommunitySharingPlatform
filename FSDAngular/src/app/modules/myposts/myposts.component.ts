@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GetarticleService } from 'src/app/service/getarticle.service';
 import { SettingService } from 'src/app/service/setting.service';
+import  Swal  from 'sweetalert2';
+
 
 
 
@@ -44,7 +46,13 @@ export class MypostsComponent implements OnInit {
 
   deletearticle(id){
     this.getArticleService.deletearticle(id).subscribe();
-    alert("Deleted Successfully");
+    // alert("Deleted Successfully");
+    Swal.fire({
+      icon: 'success',
+      title: 'Deleted!!!',
+      text: 'Your post has been deleted successfully successfully',
+      
+    })
     this.ngOnInit();
     this.ngOnInit();
     

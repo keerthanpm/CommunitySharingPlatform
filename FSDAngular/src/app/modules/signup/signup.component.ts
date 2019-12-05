@@ -7,6 +7,7 @@ import { stringify } from '@angular/compiler/src/util';
 import { Router } from '@angular/router';
 import { SignupService, User } from 'src/app/service/signup.service';
 import { MailService } from 'src/app/service/mail.service';
+import  Swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-signup',
@@ -38,7 +39,13 @@ isSubmitting=false;
    
   register(user){
     this.signupService.register(user).subscribe(response=>{
-      alert("Sign Up Successfull");
+      // alert("Sign Up Successfull");
+      Swal.fire({
+        icon: 'success',
+        title: 'Signed up successfully',
+        text: 'Sign in to explore!!',
+        
+      })
       this.mailService.sendmail(user.email).subscribe();
       this.router.navigate(['login']);
     })

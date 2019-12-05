@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { NewarticleService } from '../../newarticle.service'
 import { HttpClient } from '@angular/common/http';
 import { error } from 'util';
+import  Swal  from 'sweetalert2';
 
 
 @Component({
@@ -61,7 +62,13 @@ export class NewArticleComponent implements OnInit {
 
        this.newarticle.postThread(this.registrationForm.value.articleTittle, this.registrationForm.value.yourArticle, this.registrationForm.value.tags, this.registrationForm.value.image)
       // console.log("Sucessfull")
-       alert('New Article posted successfully');
+      //  alert('New Article posted successfully');
+      Swal.fire({
+        icon: 'success',
+        title: 'New Post!!!',
+        text: 'Your post has been deleted successfully successfully',
+        
+      })
       // this.router.navigate(['/dashboard/globalfeed']);
       this.http.get('http://localhost:9002/api/ping').subscribe(response=>{
     
