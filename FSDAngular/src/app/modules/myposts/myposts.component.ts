@@ -50,7 +50,7 @@ export class MypostsComponent implements OnInit {
     Swal.fire({
       icon: 'success',
       title: 'Deleted!!!',
-      text: 'Your post has been deleted successfully successfully',
+      text: 'Your post has been deleted successfully ',
       
     })
     this.ngOnInit();

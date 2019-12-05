@@ -66,7 +66,7 @@ export class NewArticleComponent implements OnInit {
       Swal.fire({
         icon: 'success',
         title: 'New Post!!!',
-        text: 'Your post has been deleted successfully successfully',
+        text: 'Your post has been cretaed successfully',
         
       })
       // this.router.navigate(['/dashboard/globalfeed']);
