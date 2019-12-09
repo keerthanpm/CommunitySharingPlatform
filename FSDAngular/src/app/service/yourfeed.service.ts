@@ -6,7 +6,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class YourfeedService {
 
-  private REST_API_SERVER = "http://localhost:4000/thread/yourfeed";
+  private REST_API_SERVER = "https://thread-service.herokuapp.com/thread/yourfeed";
   
   
 

@@ -18,7 +18,7 @@ export class AuthenticationService {
 
   constructor(private httpClient:HttpClient) { }
   authenticate(username, password) {
-    return this.httpClient.post<any>('http://localhost:8888/user/authenticate',{username,password}).pipe(
+    return this.httpClient.post<any>('https://conduit-jwt.cfapps.io/user/authenticate',{username,password}).pipe(
      map(
        userData => {
         sessionStorage.setItem('username',username);

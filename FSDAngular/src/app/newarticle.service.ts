@@ -4,7 +4,7 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class NewarticleService {
-  private REST_LIKE_ROUTE = "http://localhost:4000/thread/create";
+  private REST_LIKE_ROUTE = "https://thread-service.herokuapp.com/thread/create";
   constructor(private httpClient: HttpClient) { }
   public postThread(title, post, tag, img){
     //const headers = new HttpHeaders({ Authorization: 'Bearer ' + sessionStorage.getItem('token') });

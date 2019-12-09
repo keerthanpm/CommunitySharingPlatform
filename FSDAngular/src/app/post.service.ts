@@ -6,9 +6,9 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class PostService {
   id:any
-  private REST_API_SERVER = "http://localhost:4000/thread/get";
-  private REST_LIKE_ROUTE = "http://localhost:4000/thread/like";
-  private REST_POST_ROUTE = "http://localhost:4000/thread/post";
+  private REST_API_SERVER = "https://thread-service.herokuapp.com/thread/get";
+  private REST_LIKE_ROUTE = "https://thread-service.herokuapp.com/thread/like";
+  private REST_POST_ROUTE = "https://thread-service.herokuapp.com/thread/post";
   private REST_REPLY_ROUTE = "https://thread-service.herokuapp.com/thread/postReply";
 
   constructor(private httpClient: HttpClient) { }

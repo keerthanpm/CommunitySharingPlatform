@@ -28,7 +28,7 @@ export class GetarticleService {
   constructor(private httpClient:HttpClient) { }
 
   getarticle(id){
-    return this.httpClient.get('http://localhost:4000/thread/get'+'?threadId='+id)
+    return this.httpClient.get('https://thread-service.herokuapp.com/thread/get'+'?threadId='+id)
   }
 
   updatearticle(article){
@@ -39,10 +39,10 @@ export class GetarticleService {
       tags: article.tags,
       image: article.image_url
     }
-    return this.httpClient.post('http://localhost:4000/thread/updateThread',body)
+    return this.httpClient.post('https://thread-service.herokuapp.com/thread/updateThread',body)
   }
 
   deletearticle(id){
-    return this.httpClient.get('http://localhost:4000/thread/deleteThread'+'?threadId='+id)
+    return this.httpClient.get('https://thread-service.herokuapp.com/thread/deleteThread'+'?threadId='+id)
   }
 }

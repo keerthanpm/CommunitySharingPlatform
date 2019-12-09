@@ -7,7 +7,8 @@
     
 
     <div>
-      <form [formGroup]="loginForm" (ngSubmit)="onlogin(loginForm.value)">
+      <form [formGroup]="loginForm" >
+          <!-- (ngSubmit)="onlogin(loginForm.value)" -->
         <div class="form-group">
           <input [class.is-invalid]="loginForm.get('userName1').invalid && loginForm.get('userName1').touched"
             formControlName="userName1" type="text" [(ngModel)]="user.username" class="form-control form-control-lg" placeholder="User Name">
@@ -17,9 +18,9 @@
               required</small>
             <small *ngIf="loginForm.get('userName1').errors?.required" class="text-danger">Name is
               required</small>
-            <small *ngIf="loginForm.get('userName1').errors?.forbiddenName"
+            <!-- <small *ngIf="loginForm.get('userName1').errors?.forbiddenName"
               class="text-danger">{{userName1.errors?.forbiddenName.value}}
-              userName1Name not allowed</small>
+              userName1Name not allowed</small> -->
           </div>
         </div>
 
