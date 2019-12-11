@@ -12,7 +12,8 @@ function jwt() {
             '/thread/search',
            // '/thread/post',
             '/thread/get',
-            '/thread/latestTags'
+            '/thread/latestTags',
+            '/thread/searchByTags'
         ]
     });
 }
