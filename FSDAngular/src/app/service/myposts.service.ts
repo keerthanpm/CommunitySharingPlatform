@@ -5,7 +5,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
   providedIn: 'root'
 })
 export class MypostsService {
-  private REST_API_MYPOST = "http://localhost:4000/thread/myPosts";
+  private REST_API_MYPOST = "https://thread-service.herokuapp.com/thread/myPosts";
 
 
   constructor(private httpClient: HttpClient) { }

@@ -22,6 +22,7 @@ import { ArticleComponent } from './modules/article/article.component';
 import { MypostsComponent } from './modules/myposts/myposts.component';
 import { EditArticleComponent } from './modules/edit-article/edit-article.component';
 import { TextareaComponent } from './modules/textarea/textarea.component';
+import { UpdateArticleComponent } from './modules/update-article/update-article.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TextareaComponent } from './modules/textarea/textarea.component';
     ArticleComponent,
     MypostsComponent,
     EditArticleComponent,
-    TextareaComponent
+    TextareaComponent,
+    UpdateArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { TextareaComponent } from './modules/textarea/textarea.component';
     ReactiveFormsModule,
     HttpClientModule,
     Layout1Module,
-    RichTextEditorAllModule
+    RichTextEditorAllModule,
+    
     
 
   ],

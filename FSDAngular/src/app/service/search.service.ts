@@ -10,7 +10,7 @@ export class SearchService {
   constructor(private httpClient:HttpClient) { }
   onSearch(searchterm){
 
-     return this.httpClient.get("http://localhost:4000/thread/search"+"?searchTerm="+searchterm);
+     return this.httpClient.get("https://thread-service.herokuapp.com/thread/search"+"?searchTerm="+searchterm);
      
   }
 
@@ -24,12 +24,12 @@ export class SearchService {
 
   }
   onSearchTag(searchterm){
-    return this.httpClient.get("http://localhost:4000/thread/searchByTags"+"?searchTerm="+searchterm);
+    return this.httpClient.get("https://thread-service.herokuapp.com/thread/searchByTags"+"?searchTerm="+searchterm);
 
   }
 
   getTags(){
-    return this.httpClient.get("http://localhost:4000/thread/latestTags")
+    return this.httpClient.get("https://thread-service.herokuapp.com/thread/latestTags")
   }
 }
 

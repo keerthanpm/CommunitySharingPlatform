@@ -16,11 +16,11 @@ export class SettingService implements OnInit {
   }
 
   getuserdata(username){
-    return this.httpClient.get<User2>('http://localhost:8888/user/'+username)
+    return this.httpClient.get<User2>('https://conduit-jwt.cfapps.io/user/'+username)
   }
 
   updateuserdata(user){
-    return this.httpClient.post('http://localhost:8888/user/update',user)
+    return this.httpClient.post('https://conduit-jwt.cfapps.io/user/update',user)
 
   }
 

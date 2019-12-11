@@ -1,7 +1,8 @@
 
 <div class="container-fluid">
     <main>
-    <form [formGroup]="registrationForm" (ngSubmit)="onRegister(registrationForm.value)">
+    <form [formGroup]="registrationForm" >
+        <!-- (ngSubmit)="onRegister(registrationForm.value)" -->
          <div class="form-group"> 
         <input  
         id="art1" [class.is-invalid]="registrationForm.get('articleTittle').invalid && registrationForm.get('articleTittle').touched"

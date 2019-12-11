@@ -10,6 +10,6 @@ export class MailService {
   constructor(private http:HttpClient) { }
 
   sendmail(email){
-    return this.http.get("http://localhost:1234/api/send-mail?email="+email);
+    return this.http.get("https://mailservice.cfapps.io/api/send-mail?email="+email);
   }
 }

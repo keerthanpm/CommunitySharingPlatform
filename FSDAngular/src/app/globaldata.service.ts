@@ -6,8 +6,8 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class GlobaldataService {
 
-  private REST_API_SERVER = "http://localhost:4000/thread/get";
-  private REST_LIKE_ROUTE = "http://localhost:4000/thread/like";
+  private REST_API_SERVER = "https://thread-service.herokuapp.com/thread/get";
+  private REST_LIKE_ROUTE = "https://thread-service.herokuapp.com/thread/like";
   
 
   constructor(private httpClient: HttpClient) { }

@@ -34,6 +34,6 @@ export class SignupService {
   constructor(private httpClient:HttpClient,private router:Router) { }
 
   register(user){
-    return this.httpClient.post<User>('http://localhost:8888/user/register',user)
+    return this.httpClient.post<User>('https://conduit-jwt.cfapps.io/user/register',user)
   }
 }
